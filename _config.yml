@@ -1,0 +1,21 @@
+title: Mitchell Kelleher
+description: Notes from current software projects and experiments.
+url: "https://tkellehe.github.io"
+baseurl: ""
+timezone: America/New_York
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+github_url: "https://github.com/tkellehe/"
+linkedin_url: "https://www.linkedin.com/in/mitchell-kelleher/"

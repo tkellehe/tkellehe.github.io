@@ -1,0 +1,28 @@
+<div class="chalk-panel">
+  {% if include.title %}
+    <h3>{{ include.title }}</h3>
+  {% endif %}
+  <table class="chalk-table">
+    {% if include.headers %}
+      <thead>
+        <tr>
+          {% for header in include.headers %}
+            <th>{{ header }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+    {% endif %}
+    <tbody>
+      {% for row in include.rows %}
+        <tr>
+          {% for cell in row %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if include.footnote %}
+    <p class="panel-foot">{{ include.footnote }}</p>
+  {% endif %}
+</div>

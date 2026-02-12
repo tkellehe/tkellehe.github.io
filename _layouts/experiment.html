@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="post-entry experiment-entry"{% if page.chart_data %} data-chart-data-url="{{ page.chart_data | relative_url }}"{% endif %}>
+  <a class="back-link" href="{{ '/' | relative_url }}">Back to home</a>
+  <header class="post-header experiment-header">
+    {% if page.eyebrow %}
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% if page.read_time %}
+      <p class="read-time">{{ page.read_time }}</p>
+    {% endif %}
+    {% if page.lede %}
+      <p class="lede">{{ page.lede }}</p>
+    {% endif %}
+  </header>
+  <div class="post-content experiment-content">
+    {{ content }}
+  </div>
+</article>
+{% if page.chart_data %}
+  <script defer src="{{ '/assets/js/experiment-charts.js' | relative_url }}"></script>
+{% endif %}

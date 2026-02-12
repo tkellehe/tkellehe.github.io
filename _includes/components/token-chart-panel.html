@@ -1,0 +1,44 @@
+{% assign chart_kind = include.kind | default: "totals" %}
+{% assign doc_sizes_csv = include.doc_sizes | default: "Small,Medium,XLarge,XXLarge,XXXLarge" %}
+{% assign doc_sizes = doc_sizes_csv | split: "," %}
+
+<div class="chalk-panel token-growth-panel">
+  <h3>{{ include.title }}</h3>
+  {% if include.subtitle %}
+    <p class="panel-foot">{{ include.subtitle }}</p>
+  {% endif %}
+  <div class="token-legend" aria-hidden="true">
+    <span><i class="legend-swatch {{ include.left_class }}"></i> {{ include.left_label }}</span>
+    <span><i class="legend-swatch {{ include.right_class }}"></i> {{ include.right_label }}</span>
+  </div>
+  <ul
+    class="token-growth-list"
+    aria-label="{{ include.aria_label }}"
+    data-token-chart
+    data-chart-kind="{{ chart_kind }}"
+    data-model="{{ include.model }}"
+    data-left-key="{{ include.left_key }}"
+    data-right-key="{{ include.right_key }}"
+    data-show-note="{{ include.show_note | default: 'false' }}"
+  >
+    {% for size_value in doc_sizes %}
+      {% assign doc_size = size_value | strip %}
+      <li data-doc-size="{{ doc_size }}">
+        <strong>{{ doc_size }}</strong>
+        <div class="token-row" data-series="left">
+          <span class="token-label">{{ include.left_label }}</span>
+          <div class="bar-track"><span class="bar {{ include.left_class }}" style="--fill: 0%"></span></div>
+          <em class="token-value">--</em>
+        </div>
+        <div class="token-row" data-series="right">
+          <span class="token-label">{{ include.right_label }}</span>
+          <div class="bar-track"><span class="bar {{ include.right_class }}" style="--fill: 0%"></span></div>
+          <em class="token-value">--</em>
+        </div>
+        {% if include.show_note == "true" %}
+          <p class="token-row-note" data-series-note>--</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
