@@ -10,6 +10,9 @@ kramdown:
 
 permalink: /:year/:month/:day/:title/
 
+plugins:
+  - jekyll-last-modified-at
+
 defaults:
   - scope:
       path: ""
@@ -19,3 +22,7 @@ defaults:
 
 github_url: "https://github.com/tkellehe/"
 linkedin_url: "https://www.linkedin.com/in/mitchell-kelleher/"
+repository_url: "https://github.com/tkellehe/tkellehe.github.io"
+repository_branch: "main"
+copyright_name: "Mitchell Kelleher"
+content_license: "CC BY 4.0"

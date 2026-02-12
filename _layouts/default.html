@@ -13,6 +13,19 @@
   <body class="{{ page.body_class }}">
     <main class="page">
       {{ content }}
+      <footer class="site-footer" aria-label="Site footer">
+        <p class="footer-legal">
+          &copy; {{ site.time | date: "%Y" }} {{ site.copyright_name | default: "Mitchell Kelleher" }}.
+          Content licensed {{ site.content_license | default: "CC BY 4.0" }} unless otherwise noted.
+        </p>
+        {% if site.repository_url and page.path and page.last_modified_at %}
+          <p class="footer-edited">
+            <a href="{{ site.repository_url }}/commits/{{ site.repository_branch | default: 'main' }}/{{ page.path | uri_escape }}" target="_blank" rel="noopener noreferrer">
+              Edited {{ page.last_modified_at | date: "%B %-d, %Y" }}
+            </a>
+          </p>
+        {% endif %}
+      </footer>
     </main>
   </body>
 </html>

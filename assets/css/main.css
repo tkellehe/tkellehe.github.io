@@ -168,6 +168,36 @@ h2 {
   color: var(--muted-ink);
 }
 
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.78rem;
+  color: var(--muted-ink);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-edited a {
+  color: var(--accent-strong);
+  text-decoration-color: rgba(90, 50, 23, 0.35);
+}
+
+.footer-edited a:hover,
+.footer-edited a:focus-visible {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  outline: none;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 0.8rem;
@@ -563,6 +593,10 @@ h2 {
 @media (max-width: 620px) {
   .post-content {
     font-size: 1.05rem;
+  }
+
+  .site-footer {
+    font-size: 0.74rem;
   }
 
   .post-content h2 {
