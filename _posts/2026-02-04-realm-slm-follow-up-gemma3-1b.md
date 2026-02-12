@@ -194,5 +194,4 @@ footnote=page.fulltext_failure_table.footnote
 
 1. Tighten section-ID constraints in the prompt (explicit allowed IDs + exact-match requirement).
 2. A/B test prompt variants on Small documents to recover reliability.
-3. Add confidence-aware early stopping to avoid spending all 5 iterations when enough evidence exists.
-4. Expand local model sweep (`llama3.2`, `phi3`, `mistral`) with the same benchmark harness.
+3. Move to next loop component: Editor/Analyzer. Can the local SLM not only pick sections but also extract and summarize them effectively for downstream use?
