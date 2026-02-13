@@ -2,26 +2,28 @@
   {% if include.title %}
     <h3>{{ include.title }}</h3>
   {% endif %}
-  <table class="chalk-table">
-    {% if include.headers %}
-      <thead>
-        <tr>
-          {% for header in include.headers %}
-            <th>{{ header }}</th>
-          {% endfor %}
-        </tr>
-      </thead>
-    {% endif %}
-    <tbody>
-      {% for row in include.rows %}
-        <tr>
-          {% for cell in row %}
-            <td>{{ cell }}</td>
-          {% endfor %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <div class="chalk-table-wrap" role="region" aria-label="{{ include.title | default: 'Data table' }}" tabindex="0">
+    <table class="chalk-table">
+      {% if include.headers %}
+        <thead>
+          <tr>
+            {% for header in include.headers %}
+              <th>{{ header }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+      {% endif %}
+      <tbody>
+        {% for row in include.rows %}
+          <tr>
+            {% for cell in row %}
+              <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
   {% if include.footnote %}
     <p class="panel-foot">{{ include.footnote }}</p>
   {% endif %}

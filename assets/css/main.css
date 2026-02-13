@@ -274,11 +274,11 @@ h2 {
   margin-top: 1.35rem;
 }
 
-.post-content p,
-.post-content ul,
-.post-content ol,
-.post-content blockquote {
-  max-width: 70ch;
+.post-content > p,
+.post-content > ul,
+.post-content > ol,
+.post-content > blockquote {
+  max-width: 82ch;
 }
 
 .post-content code,
@@ -536,17 +536,44 @@ h2 {
   font-size: 0.95rem;
 }
 
+.chalk-table-wrap {
+  margin-top: 0.74rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #af8a5f rgba(18, 12, 9, 0.58);
+  border: 1px solid rgba(255, 226, 182, 0.26);
+  border-radius: 0.62rem;
+  background: rgba(19, 13, 9, 0.3);
+}
+
+.chalk-table-wrap::-webkit-scrollbar {
+  height: 10px;
+}
+
+.chalk-table-wrap::-webkit-scrollbar-track {
+  background: rgba(18, 12, 9, 0.58);
+  border-radius: 999px;
+}
+
+.chalk-table-wrap::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #8e6945 0%, #c8a074 100%);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 230, 188, 0.35);
+}
+
+.chalk-table-wrap::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #9b744d 0%, #d8ae7f 100%);
+}
+
 .chalk-table {
   width: 100%;
-  margin-top: 0.74rem;
+  margin-top: 0;
+  min-width: 560px;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 0.95rem;
   line-height: 1.45;
-  border: 1px solid rgba(255, 226, 182, 0.26);
-  border-radius: 0.62rem;
-  overflow: hidden;
-  background: rgba(19, 13, 9, 0.3);
 }
 
 .chalk-table th,
@@ -590,6 +617,21 @@ h2 {
   }
 }
 
+@media (max-width: 720px) {
+  body {
+    background: var(--paper);
+  }
+
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 1rem 0.9rem 1.2rem;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
 @media (max-width: 620px) {
   .post-content {
     font-size: 1.05rem;
@@ -608,7 +650,24 @@ h2 {
   }
 
   .token-row {
-    grid-template-columns: 82px 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "label value"
+      "bar bar";
+    gap: 0.2rem 0.42rem;
+  }
+
+  .token-label {
+    grid-area: label;
+  }
+
+  .token-row .bar-track {
+    grid-area: bar;
+  }
+
+  .token-value {
+    grid-area: value;
+    justify-self: end;
   }
 
   .bar-list span,
@@ -617,5 +676,9 @@ h2 {
   .token-value,
   .chalk-table {
     font-size: 0.83rem;
+  }
+
+  .chalk-table {
+    min-width: 520px;
   }
 }
