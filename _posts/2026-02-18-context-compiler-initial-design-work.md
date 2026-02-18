@@ -1,165 +1,194 @@
----
-layout: experiment
-title: "Context Compiler: Initial Design Work"
-description: "Initial design notes for ctxc, a local-first context compiler built on the full REALM architecture."
-date: 2026-02-18 09:20:00 -0500
-category: architectures
-tags: [ctxc, realm, design, local-first, slm, ai]
-eyebrow: "Design Log - ctxc"
-read_time: "Estimated read: 7 min"
-lede: "ctxc is a local-first context compiler that applies the full REALM architecture to turn large rule and documentation corpora into minimal, auditable task context. This post sets the initial design boundary, draft interfaces, and open questions."
-excerpt: "Initial design scaffold for ctxc, a local-first context compiler built on REALM and validated by early gemma3:1b results."
-design_scope_table:
-  headers: ["Area", "In v0", "Deferred"]
-  rows:
-    - ["Input sources", "Single local markdown/text corpus", "Multi-repo ingestion and remote connectors"]
-    - ["Model strategy", "Local SLM primary path", "Hybrid local + cloud fallback"]
-    - ["Loop coverage", "Reader + Editor/Analyzer + Loop Controller + Monitor + Worker handoff", "Adaptive multi-monitor routing"]
-    - ["Output", "Compiled context pack + trace file", "Long-running context cache service"]
-pipeline_table:
-  headers: ["Phase", "REALM Component", "Primary Output", "Status"]
-  rows:
-    - ["1. Read", "Reader", "Candidate sections ranked against task", "Drafted"]
-    - ["2. Edit/Analyze", "Editor/Analyzer", "Normalized task-scoped snippets", "Drafted"]
-    - ["3. Loop", "Loop Controller", "State updates and stop/budget checks", "Drafted"]
-    - ["4. Monitor", "Monitor", "Quality verdict and recovery signal", "Drafted"]
-    - ["5. Emit", "Worker handoff", "Final compiled context artifact", "Drafted"]
-cli_table:
-  headers: ["Command", "Purpose", "Current Intent"]
-  rows:
-    - ["ctxc init", "Create project config and defaults", "Required for v0"]
-    - ["ctxc compile <task>", "Run full REALM compile loop", "Required for v0"]
-    - ["ctxc trace <run-id>", "Inspect iteration decisions and monitor checks", "Required for v0"]
-    - ["ctxc eval", "Run benchmark set and summary metrics", "Optional in v0"]
-evaluation_table:
-  headers: ["Metric", "Why it matters", "How to compute (draft)"]
-  rows:
-    - ["tokens_total", "Overall runtime cost", "Sum tokens across loop iterations"]
-    - ["tokens_to_sufficient", "Early-stop efficiency", "Tokens used until first sufficient monitor verdict"]
-    - ["first_correct_iteration", "Convergence speed", "First iteration that contains expected section"]
-    - ["max_iteration_input", "Local feasibility", "Largest single prompt input in any iteration"]
-    - ["compile_success_rate", "Reliability", "Successful compiles / total tasks"]
-milestone_table:
-  headers: ["Milestone", "Target", "Notes"]
-  rows:
-    - ["M1: CLI + local run skeleton", "Week 1", "Command parser, config load, dry-run trace output"]
-    - ["M2: Reader + loop state engine", "Week 2", "Deterministic section IDs and bounded iteration loop"]
-    - ["M3: Editor/Analyzer + monitor", "Week 3", "Structured context pack with quality gate"]
-    - ["M4: Local SLM benchmark pass", "Week 4", "Compare compile metrics to full-text baseline"]
-open_questions_table:
-  headers: ["Question", "Current default", "To validate"]
-  rows:
-    - ["Canonical section IDs?", "Hierarchical string IDs from TOC", "Robustness on tiny docs and noisy headings"]
-    - ["Monitor cadence?", "Every iteration for v0", "Can we skip checks without quality loss?"]
-    - ["Context pack format?", "JSON with provenance metadata", "Need markdown export for manual review?"]
-    - ["Recovery strategy?", "Backtrack last section + reselection", "Alternative: branch search on low confidence"]
----
-- **Architecture baseline:** [REALM: Read Edit/Analyze Loop Monitor]({% post_url 2026-02-01-realm-read-edit-analyze-loop-monitor %})
-- **Local SLM evidence:** [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %})
-- **Working name:** `ctxc` (Context Compiler)
+—
+layout: post
+title: “Context Compiling: ctxc and vectorless builds”
+date: 2026-02-18 12:00:00 -0500
+category: architecture
+tags: [context, ctxc, realm, rag, compilers, rust, writing]
+excerpt: “I’m building a ‘context compiler’ that walks large docs like a book and emits a tight, testable context packet—without embeddings—so even tiny models can reliably execute the task.”
+—
 
-{% include components/figure-card.html src="/assets/images/posts/2026-02-01/realm-basic-diagram.png" alt="REALM loop diagram showing iterative document navigation and context accumulation" width="1536" height="940" caption="ctxc is intended to operationalize the full REALM loop into a local-first compiler workflow." %}
+I keep hitting the same wall with LLM systems:
 
-## Why ctxc, Why Now
-The 02-01 post defined the full REALM architecture, and the 02-04 run showed that a local 1B model can already execute key loop behavior effectively on larger documents. That is enough signal to begin implementation design for an end-to-end tool.
+> The model *can* do the task… but only if it has the right slice of the document.
 
-This post is intentionally a scaffold: clear boundaries, draft interfaces, and concrete placeholders that can be filled with implementation details and benchmark results.
+“Just shove the whole doc into the prompt” doesn’t scale. It’s expensive, slow, and it still fails in the worst way: it misses *one* constraint and confidently does the wrong thing.
 
-## Goal Statement (Draft)
-`ctxc` should compile large local document corpora into the smallest useful, auditable context bundle for a specific task, using the full REALM architecture and staying 100% local by default.
+So I’ve been building an approach I’m calling **Context Compiling**.
 
-## MVP Boundary (v0)
-{% include components/chalk-table-panel.html
-  title="ctxc v0 Scope"
-  headers=page.design_scope_table.headers
-  rows=page.design_scope_table.rows
-%}
+The first piece of it is **`ctxc`**: a **context compiler**.
 
-## Initial Pipeline Shape
-{% include components/chalk-table-panel.html
-  title="Compile Pipeline (Mapped to REALM)"
-  headers=page.pipeline_table.headers
-  rows=page.pipeline_table.rows
-%}
+—
 
-Draft loop sketch:
+## Context compiling in one sentence
 
-```text
-state = init(task, corpus, budget)
+Given a **document** (or doc-set) and a **request**, `ctxc` **walks the document like a book**, extracts the *authoritative* rules/facts/examples you actually need, and outputs a compact **Context Packet** that an “executor” model can follow.
 
-while not state.done and state.iters < max_iters:
-  candidate = Reader.pick(state.query, state.available, state.history)
-  draft = EditorAnalyze.normalize(candidate, state.query, constraints)
-  state.context = merge(state.context, draft)
+Think of it as taking unstructured text and producing a **compiled artifact** you can inspect, diff, cache, and test.
 
-  verdict = Monitor.check(state.context, state.query, quality_bar)
-  state = LoopController.update(state, candidate, verdict)
+—
 
-emit ContextPack(state.context, state.trace, state.metrics)
-```
+## Why I’m calling it “compiling”
 
-## CLI Surface (Working Draft)
-{% include components/chalk-table-panel.html
-  title="CLI Commands"
-  headers=page.cli_table.headers
-  rows=page.cli_table.rows
-%}
+This isn’t just retrieval.
 
-Proposed usage examples:
+A compiler doesn’t “search” It:
 
-```bash
-ctxc init
-ctxc compile "How do I authenticate API requests?" --corpus ./docs/api.md
-ctxc trace run_2026_02_18_001
-```
+- **parses** structured inputs
+- follows a **graph** (imports, includes, references)
+- enforces **precedence rules**
+- produces an intermediate representation (IR)
+- emits a final artifact under constraints (size/budget)
 
-## Artifact Contract (First Pass)
-Expected local outputs per compile run:
+That mental model maps surprisingly well to LLM context.
 
-```text
-.ctxc/
-  runs/
-    run_<id>/
-      context-pack.json
-      trace.json
-      metrics.json
-      monitor-log.md
-```
+—
 
-`context-pack.json` should include:
+## Vectorless builds
 
-1. Final selected snippets
-2. Source section IDs
-3. Short rationale for each inclusion
-4. Compile metadata (model, timestamps, limits)
+A lot of RAG stacks start with embeddings + vector search. That works, but it comes with tradeoffs:
 
-## Evaluation Plan (Draft)
-{% include components/chalk-table-panel.html
-  title="Metrics to Track in Early Runs"
-  headers=page.evaluation_table.headers
-  rows=page.evaluation_table.rows
-%}
+- indexing/re-indexing overhead
+- “semantic drift” (good matches that aren’t authoritative)
+- hard-to-debug retrieval (“why that chunk?”)
 
-## Delivery Milestones
-{% include components/chalk-table-panel.html
-  title="Initial 4-Week Plan"
-  headers=page.milestone_table.headers
-  rows=page.milestone_table.rows
-%}
+My current direction for `ctxc` is **vectorless builds**: focus on **document structure** and **explicit relationships**.
 
-## Open Questions to Resolve
-{% include components/chalk-table-panel.html
-  title="Design Questions"
-  headers=page.open_questions_table.headers
-  rows=page.open_questions_table.rows
-%}
+Instead of “nearest neighbor,” I want:
 
-## Fill-In Sections (Author TODO)
-1. Add concrete runtime assumptions (CPU, RAM, model quantization).
-2. Add one worked trace from `ctxc compile` once implementation starts.
-3. Add failure taxonomy (invalid section ID, loop drift, monitor false positive).
-4. Add benchmark table comparing iterative compile vs full-text baseline.
-5. Add a short note on when local-only should fall back to a stronger model.
+- headings / TOC navigation
+- internal links and references
+- explicit “see also” and dependency edges
+- stable provenance (“this came from Section 4.2 → Example B”)
 
-## Current Position
-The design direction is clear: implement `ctxc` as a local-first context compiler that operationalizes the full REALM loop, then validate with the same style of measurements used in the earlier posts.
+This is closer to *reading the manual* than *searching the manual*.
+
+(Embeddings may still be useful later, but I don’t want them to be required to get reliable results.)
+
+—
+
+## How `ctxc` works (high level)
+
+At a high level, `ctxc`:
+
+1. **Ingests** docs (Markdown is a great starting point)
+2. Builds a **navigation graph** (headings, links, references)
+3. Uses a small model as a **policy** to decide what to pull next (“go here”, “follow that reference”, “extract this rule”)
+4. Packs the result into a strict **token budget**
+
+The output is not “a long paste.” It’s a **Context Packet**.
+
+—
+
+## The Context Packet (the thing that matters)
+
+The key idea is: the context should be an *artifact*, not a blob.
+
+A packet can be as simple as:
+
+- **Constraints (MUST / MUST NOT)**
+- **Facts / Canon (do not contradict)**
+- **Procedures / Steps**
+- **Definitions**
+- **Examples (short, high-signal)**
+- **Formatting requirements**
+- **Provenance** (where each item came from)
+
+Once you have this, you unlock a toolchain:
+
+- `trace`: why did we include this item?
+- `diff`: what changed between two compiles?
+- `lint`: did the executor violate a MUST rule?
+- caching: reuse packets, incrementally rebuild when docs change
+
+—
+
+## Where REALM fits
+
+This work is designed around the same loop I’ve been exploring in my REALM notes:
+
+- **Read** about what the task needs
+- **Edit/Analyze** the current sections
+- **Loop** and refine the context
+- **Monitor** the context to ensure on track or if needs to exit
+
+`ctxc` is the practical “compiler” implementation of that loop.
+
+> *(If you’re reading this on my blog, see my posts on REALM / context management for the broader framing.)*
+
+—
+
+## Why this is exciting for coding tools
+
+Coding assistants fail less when they have:
+
+- the exact API contract
+- the real configuration rules
+- the sanctioned usage patterns
+- the “do not do this” list
+
+Instead of shipping an entire README into a prompt, `ctxc` can compile:
+
+- auth + security rules
+- endpoint shapes
+- error handling expectations
+- canonical examples
+
+…and then hand a clean packet to the executor.
+
+—
+
+## Why this is *even more* exciting for writing books
+
+Writing isn’t “just prose generation.” It’s constraint satisfaction over canon:
+
+- timeline continuity
+- what each character knows (knowledge boundaries)
+- voice and POV rules
+- delayed reveals
+- promises and payoffs
+
+A story bible is just another document—except continuity mistakes are *painful*.
+
+A context compiler can emit a scene-ready packet like:
+
+- “Here is who everyone is *right now*”
+- “Here is what cannot be revealed yet”
+- “Here are the motifs/tone constraints”
+- “Here are continuity watch-outs: spellings, titles, geography”
+
+That’s the path to making the **executor model small** too:
+
+> the compiler carries the structure; the tiny model carries the pen.
+
+—
+
+## Implementation direction
+
+I’m leaning toward building `ctxc` as:
+
+- a **Rust library** (fast, portable, local-first)
+- a **CLI** (`ctxc compile`, `ctxc trace`, `ctxc diff`, `ctxc lint`)
+- later, a **GUI** for managing projects and watching compiles live
+
+Local-first matters—especially for authors.
+
+—
+
+## The end goal
+
+The goal isn’t “bigger prompts.” It’s the opposite:
+
+> **Smaller, higher-quality prompts**—compiled, explainable, and testable.
+
+And once the compiler is reliable, the executor can be much smaller too.
+
+—
+
+## What’s next
+
+I’ll likely follow this post with:
+
+- a concrete Context Packet schema
+- how I represent document structure (headings/links/references)
+- caching + incremental compilation
+- a first “scene packet” prototype for writing
