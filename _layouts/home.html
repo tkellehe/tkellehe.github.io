@@ -29,26 +29,62 @@ layout: default
   </section>
 {% endif %}
 
+{% assign tag_entries = site.tags | sort %}
 <section>
   <h2>Recent Entries</h2>
   <p class="section-note">
+    Filter by one or more tags.
   </p>
+
+  {% if tag_entries.size > 0 %}
+    <div class="tag-filter" data-tag-filter-root>
+      <div class="tag-filter-controls" role="group" aria-label="Filter posts by tag">
+        {% for tag_entry in tag_entries %}
+          {% assign tag_name = tag_entry[0] %}
+          <button type="button" class="tag-chip tag-filter-chip" data-filter-tag="{{ tag_name | escape }}" aria-pressed="false">
+            {{ tag_name }}
+            <span class="tag-count">{{ tag_entry[1] | size }}</span>
+          </button>
+        {% endfor %}
+        <button type="button" class="tag-clear-button" data-filter-clear hidden>
+          Clear filters
+        </button>
+      </div>
+      <p class="filter-status" data-filter-status>
+        Showing <span data-filter-visible>{{ site.posts | size }}</span> of <span data-filter-total>{{ site.posts | size }}</span> posts.
+      </p>
+    </div>
+  {% endif %}
 
   {% if site.posts.size > 0 %}
     <ol class="post-list">
       {% for post in site.posts %}
-        <li>
+        <li data-post-tags="{% if post.tags %}{{ post.tags | join: ',' | escape }}{% endif %}">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           {% if post.excerpt %}
             <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
           {% endif %}
+          {% if post.tags %}
+            <p class="post-tags" aria-label="Post tags">
+              {% for tag in post.tags %}
+                <span class="tag-chip tag-chip-static">{{ tag }}</span>
+              {% endfor %}
+            </p>
+          {% endif %}
         </li>
       {% endfor %}
     </ol>
+    <p class="blank-state blank-state-filter" data-filter-empty hidden>
+      No posts match the selected tags.
+    </p>
   {% else %}
     <p class="blank-state">
       No posts yet. First entry is coming soon.
     </p>
   {% endif %}
 </section>
+
+{% if tag_entries.size > 0 %}
+  <script defer src="{{ '/assets/js/home-tags.js' | relative_url }}"></script>
+{% endif %}

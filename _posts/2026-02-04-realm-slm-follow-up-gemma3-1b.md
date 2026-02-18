@@ -4,6 +4,7 @@ title: "REALM Continuation: Local SLM Evaluation with gemma3:1b"
 description: "Follow-up to the February 3 REALM baseline. This compares gemma3:1b iterative navigation versus full-text prompting, then positions the local SLM against the earlier cloud-model runs."
 date: 2026-02-04 09:15:00 -0500
 category: experiments
+tags: [realm, slm, gemma3-1b, local-inference, experiments, ai, context-curation]
 eyebrow: "Second Log - REALM Experiments"
 read_time: "Estimated read: 6 min"
 lede: "This continuation tests whether a local 1B model can run the same REALM read loop effectively on larger documentation. The core result is strong: on Medium through XXXLarge documents, gemma3:1b uses fewer tokens than full-text prompting while keeping per-iteration context windows small enough for constrained hardware."

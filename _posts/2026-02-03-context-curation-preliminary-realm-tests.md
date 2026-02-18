@@ -4,6 +4,7 @@ title: "Context Curation: Preliminary REALM Tests"
 description: "An initial benchmark of REALM's read loop. This evaluates iterative table-of-contents navigation versus full-text prompting across document sizes, and summarizes what the results suggest about reliable context curation."
 date: 2026-02-03 04:33:52 -0500
 category: experiments
+tags: [realm, experiments, context-curation, ai]
 eyebrow: "First Log - REALM Experiments"
 read_time: "Estimated read: 5 min"
 lede: "This log evaluates a core hypothesis: an agent should be able to navigate a document by reading a table of contents in small steps, instead of loading the full text into every prompt. I tested a minimal read loop across multiple document sizes and two queries. In these runs, both cloud models reached the correct section within two iterations across all sizes. That is the baseline signal needed before expanding toward the broader REALM loop for production context curation."

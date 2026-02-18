@@ -4,6 +4,7 @@ title: "REALM: Read Edit/Analyze Loop Monitor"
 description: "An architecture for low-cost context curation from long rule documents using a modular loop."
 date: 2026-02-01 09:00:00 -0500
 category: architectures
+tags: [realm, architecture, context-curation, local-first, ai]
 eyebrow: "Architecture Note - REALM"
 read_time: "Estimated read: 6 min"
 lede: "REALM is a Read Edit/Analyze Loop Monitor architecture for turning large documents into the smallest useful context for downstream systems. It leans on how text models are trained to navigate structured documents and books, then applies a modular REPL-like loop to keep token cost low while preserving semantic signal."
