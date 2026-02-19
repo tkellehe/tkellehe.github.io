@@ -1,11 +1,11 @@
-—
+---
 layout: post
-title: “Context Compiling: ctxc and vectorless builds”
+title: "Context Compiling: ctxc and vectorless builds"
 date: 2026-02-18 12:00:00 -0500
-category: architecture
+category: discussion
 tags: [context, ctxc, realm, rag, compilers, rust, writing]
-excerpt: “I’m building a ‘context compiler’ that walks large docs like a book and emits a tight, testable context packet—without embeddings—so even tiny models can reliably execute the task.”
-—
+excerpt: "I’m building a ‘context compiler’ that walks large docs like a book and emits a tight, testable context packet—without embeddings—so even tiny models can reliably execute the task."
+---
 
 I keep hitting the same wall with LLM systems:
 
@@ -16,6 +16,12 @@ I keep hitting the same wall with LLM systems:
 So I’ve been building an approach I’m calling **Context Compiling**.
 
 The first piece of it is **`ctxc`**: a **context compiler**.
+
+If you want the background arc before this post, start here:
+
+- [REALM: Read Edit/Analyze Loop Monitor]({% post_url 2026-02-01-realm-read-edit-analyze-loop-monitor %})
+- [Context Curation: Preliminary REALM Tests]({% post_url 2026-02-03-context-curation-preliminary-realm-tests %})
+- [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %})
 
 —
 
@@ -64,6 +70,8 @@ This is closer to *reading the manual* than *searching the manual*.
 
 (Embeddings may still be useful later, but I don’t want them to be required to get reliable results.)
 
+For the local-first evidence behind that stance, see [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %}).
+
 —
 
 ## How `ctxc` works (high level)
@@ -104,7 +112,7 @@ Once you have this, you unlock a toolchain:
 
 ## Where REALM fits
 
-This work is designed around the same loop I’ve been exploring in my REALM notes:
+This work is designed around the same loop I’ve been exploring in [REALM: Read Edit/Analyze Loop Monitor]({% post_url 2026-02-01-realm-read-edit-analyze-loop-monitor %}):
 
 - **Read** about what the task needs
 - **Edit/Analyze** the current sections
@@ -113,7 +121,10 @@ This work is designed around the same loop I’ve been exploring in my REALM not
 
 `ctxc` is the practical “compiler” implementation of that loop.
 
-> *(If you’re reading this on my blog, see my posts on REALM / context management for the broader framing.)*
+Related posts in this same thread:
+
+- [Context Curation: Preliminary REALM Tests]({% post_url 2026-02-03-context-curation-preliminary-realm-tests %})
+- [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %})
 
 —
 
