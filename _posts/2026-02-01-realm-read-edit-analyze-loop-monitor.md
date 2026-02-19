@@ -3,7 +3,7 @@ layout: experiment
 title: "REALM: Read Edit/Analyze Loop Monitor"
 description: "An architecture for low-cost context curation from long rule documents using a modular loop."
 date: 2026-02-01 09:00:00 -0500
-category: architectures
+category: discussion
 tags: [realm, architecture, context-curation, local-first, ai]
 eyebrow: "Architecture Note - REALM"
 read_time: "Estimated read: 6 min"
@@ -25,7 +25,7 @@ REALM stands for **Read Edit/Analyze Loop Monitor**.
 
 The core idea is simple: most instruction corpora are still document-shaped. Books, manuals, API docs, and policy guides are naturally split into sections and subsections. Models are typically trained on this structure, so they can often recover meaning better from a guided section path than from one giant flat prompt.
 
-{% include components/figure-card.html src="/assets/images/posts/2026-02-01/realm-basic-diagram.png" alt="REALM loop diagram showing iterative document navigation and context accumulation" width="1536" height="940" caption="A baseline REALM loop: read, refine, monitor, and emit minimal context." %}
+{% include components/figure-card.html src="/assets/images/posts/2026-02-01/realm-diagram.png" alt="REALM loop diagram showing iterative document navigation and context accumulation" width="1536" height="940" caption="A baseline REALM loop: read, edit/analyze, loop, and monitor to emit minimal context." %}
 
 ## Why REALM Exists
 When a system needs to follow a large ruleset, there are two common failure modes:

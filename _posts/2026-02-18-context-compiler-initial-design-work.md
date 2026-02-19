@@ -23,7 +23,7 @@ If you want the background arc before this post, start here:
 - [Context Curation: Preliminary REALM Tests]({% post_url 2026-02-03-context-curation-preliminary-realm-tests %})
 - [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %})
 
-—
+---
 
 ## Context compiling in one sentence
 
@@ -31,13 +31,13 @@ Given a **document** (or doc-set) and a **request**, `ctxc` **walks the document
 
 Think of it as taking unstructured text and producing a **compiled artifact** you can inspect, diff, cache, and test.
 
-—
+---
 
 ## Why I’m calling it “compiling”
 
 This isn’t just retrieval.
 
-A compiler doesn’t “search” It:
+A compiler doesn’t “search.” A compiler:
 
 - **parses** structured inputs
 - follows a **graph** (imports, includes, references)
@@ -47,7 +47,7 @@ A compiler doesn’t “search” It:
 
 That mental model maps surprisingly well to LLM context.
 
-—
+---
 
 ## Vectorless builds
 
@@ -72,7 +72,7 @@ This is closer to *reading the manual* than *searching the manual*.
 
 For the local-first evidence behind that stance, see [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %}).
 
-—
+---
 
 ## How `ctxc` works (high level)
 
@@ -85,7 +85,7 @@ At a high level, `ctxc`:
 
 The output is not “a long paste.” It’s a **Context Packet**.
 
-—
+---
 
 ## The Context Packet (the thing that matters)
 
@@ -106,18 +106,21 @@ Once you have this, you unlock a toolchain:
 - `trace`: why did we include this item?
 - `diff`: what changed between two compiles?
 - `lint`: did the executor violate a MUST rule?
-- caching: reuse packets, incrementally rebuild when docs change
+- `cache`: reuse packets, incrementally rebuild when docs change
 
-—
+---
 
 ## Where REALM fits
 
 This work is designed around the same loop I’ve been exploring in [REALM: Read Edit/Analyze Loop Monitor]({% post_url 2026-02-01-realm-read-edit-analyze-loop-monitor %}):
 
-- **Read** about what the task needs
-- **Edit/Analyze** the current sections
-- **Loop** and refine the context
-- **Monitor** the context to ensure on track or if needs to exit
+{% include components/figure-card.html src="/assets/images/posts/2026-02-01/realm-diagram.png" alt="REALM loop diagram showing iterative document navigation and context accumulation" width="1536" height="940" caption="A baseline REALM loop: read, edit/analyze, loop, and monitor to emit minimal context." %}
+
+- **(input)**: the task + the document (purple)
+- **Read** about what the task needs (red)
+- **Edit/Analyze** the current sections (orange)
+- **Loop** and refine the context (blue)
+- **Monitor** the context to ensure on track or if needs to exit (green)
 
 `ctxc` is the practical “compiler” implementation of that loop.
 
@@ -126,7 +129,7 @@ Related posts in this same thread:
 - [Context Curation: Preliminary REALM Tests]({% post_url 2026-02-03-context-curation-preliminary-realm-tests %})
 - [REALM Continuation: Local SLM Evaluation with gemma3:1b]({% post_url 2026-02-04-realm-slm-follow-up-gemma3-1b %})
 
-—
+---
 
 ## Why this is exciting for coding tools
 
@@ -146,7 +149,7 @@ Instead of shipping an entire README into a prompt, `ctxc` can compile:
 
 …and then hand a clean packet to the executor.
 
-—
+---
 
 ## Why this is *even more* exciting for writing books
 
@@ -171,7 +174,7 @@ That’s the path to making the **executor model small** too:
 
 > the compiler carries the structure; the tiny model carries the pen.
 
-—
+---
 
 ## Implementation direction
 
@@ -183,7 +186,7 @@ I’m leaning toward building `ctxc` as:
 
 Local-first matters—especially for authors.
 
-—
+---
 
 ## The end goal
 
@@ -193,7 +196,7 @@ The goal isn’t “bigger prompts.” It’s the opposite:
 
 And once the compiler is reliable, the executor can be much smaller too.
 
-—
+---
 
 ## What’s next
 

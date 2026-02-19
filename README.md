@@ -17,4 +17,9 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Post authoring notes
+- Front matter must start and end with plain ASCII `---` on its own line.
+- Use straight quotes (`"`) in front matter values.
+- In post bodies, use `---` (with blank lines around it) when you want a horizontal section break.
+
 Code is Apache-2.0 licensed. Posts and images are CC BY 4.0 unless otherwise noted.
