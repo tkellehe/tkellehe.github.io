@@ -1,5 +1,5 @@
 ---
-layout: experiment
+layout: post
 title: "Context Curation: Preliminary REALM Tests"
 description: "An initial benchmark of REALM's read loop. This evaluates iterative table-of-contents navigation versus full-text prompting across document sizes, and summarizes what the results suggest about reliable context curation."
 date: 2026-02-03 04:33:52 -0500

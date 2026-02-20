@@ -1,5 +1,5 @@
 ---
-layout: experiment
+layout: post
 title: "REALM: Read Edit/Analyze Loop Monitor"
 description: "An architecture for low-cost context curation from long rule documents using a modular loop."
 date: 2026-02-01 09:00:00 -0500

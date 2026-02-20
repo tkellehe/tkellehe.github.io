@@ -1,5 +1,5 @@
 ---
-layout: experiment
+layout: post
 title: "REALM Continuation: Local SLM Evaluation with gemma3:1b"
 description: "Follow-up to the February 3 REALM baseline. This compares gemma3:1b iterative navigation versus full-text prompting, then positions the local SLM against the earlier cloud-model runs."
 date: 2026-02-04 09:15:00 -0500
