@@ -126,6 +126,82 @@ This work is designed around the same loop I’ve been exploring in [REALM: Read
 - **Monitor** the context to ensure on track or if needs to exit (green)
 
 `ctxc` is the practical “compiler” implementation of that loop.
+Here is a sketch of how the core loop might look in code:
+
+```python
+def run(prompt, doc):
+    # Document API assumptions:
+    # - doc.top_level_ids() -> list[str]
+    # - doc.children_ids(section_id) -> list[str]
+    # - doc.read_content(section_id) -> str
+    # - doc.read_all_content(section_ids) -> str
+
+    visible  = set(doc.top_level_ids())  # "visible section ids"
+    expanded = set()                     # prevents re-expanding the same parent
+    hidden   = set()                     # hidden once (eligible for second look)
+    blocked  = set()                     # hidden twice (final exclude)
+    selected = set()                     # OUTPUT: relevant ids
+    visited  = set()                     # loop protection
+
+    while True:
+        # Termination / resurfacing
+        if not visible:
+            if not hidden:
+                break  # END
+            # SHOW: resurface hidden candidates for a second pass
+            visible |= (hidden - blocked)
+
+        # READ model chooses next id using only (prompt, visible)
+        next_id = READ(prompt, visible)
+
+        # Loop protection: if we ever revisit an id, exit (architecture invariant broken)
+        if next_id in visited:
+            break  # or raise RuntimeError(f"READ returned already visited id: {next_id}")
+
+        visited.add(next_id)
+
+        # Defensive: if READ returns something not visible, drop it and continue
+        if next_id not in visible:
+            continue
+
+        # Consume this choice so READ cannot pick it again immediately
+        visible.remove(next_id)
+
+        # Expand if it has children (do not run EDIT/ANALYZE on non-leaf)
+        children = doc.children_ids(next_id)
+        if children:
+            if next_id not in expanded:
+                expanded.add(next_id)
+                # SHOW children, but do not re-add anything already hidden/blocked/selected
+                visible |= (set(children) - hidden - blocked - selected)
+            continue
+
+        # Leaf section: run EDIT/ANALYZE
+        next_content = doc.read_content(next_id)
+        content = doc.read_all_content(selected) # all selected content so far
+        is_relevant = EDIT_ANALYZE(prompt, next_content, content)
+
+        if is_relevant:
+            selected.add(next_id)
+            hidden.remove(next_id)  # if it had been hidden before, clear it
+            continue
+
+        # Irrelevant leaf: HIDE / BLOCK logic
+        if next_id in hidden:
+            # Second strike -> BLOCK, and remove from hidden as requested
+            hidden.remove(next_id)
+            blocked.add(next_id)
+        else:
+            # First strike -> HIDE
+            hidden.add(next_id)
+        
+        content = doc.read_all_content(selected) # all selected content so far
+        is_done = MONITOR(prompt, content)
+        if is_done:
+             break
+
+    return selected
+```
 
 Related posts in this same thread:
 
