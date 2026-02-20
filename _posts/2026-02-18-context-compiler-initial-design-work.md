@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Context Compiling: ctxc and vectorless builds"
+description: “A discussion about a tool to compile a context for concise usage.”
 date: 2026-02-18 12:00:00 -0500
 category: discussion
 tags: [context, ctxc, realm, rag, compilers, rust, writing]
+eyebrow: “Discussion - ctxc”
+read_time: “Estimated read: 7 min”
 excerpt: "I’m building a ‘context compiler’ that walks large docs like a book and emits a tight, testable context packet—without embeddings—so even tiny models can reliably execute the task."
 ---
 
