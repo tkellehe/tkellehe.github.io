@@ -9,6 +9,7 @@ eyebrow: "Third Log - REALM Experiments"
 read_time: "Estimated read: 7 min"
 lede: "This run moves past read-only section selection and uses the combined Read + Edit/Analyze loop. Across Medium through XXXLarge documents, the loop keeps iterative totals near ~1k tokens while full-text grows from ~5.6k to ~17.3k, which is a strong operational signal for context compiler workflows."
 excerpt: "Combined Read + Edit/Analyze experiment showing strong multi-size token behavior for the context compiler path."
+chart_data: /assets/data/experiments/2026-02-21/multi-size-experiment-2026-02-21.json
 queries:
   - "How do I authenticate API requests?"
   - "What are the rate limits?"
@@ -90,9 +91,9 @@ The 02-03 and 02-04 posts validated section navigation. This run moves one step 
 The key signal is stability under growth. Across Medium through XXXLarge, iterative totals stay near ~1k tokens while full-text scales to 5k to 17k+.
 
 ## Data for This Run
-Primary report copied into this repo:
+Primary JSON dataset copied into this repo:
 
-- [`multi-size-experiment-2026-02-21T05-34-30.md`]({{ '/assets/data/experiments/2026-02-21/multi-size-experiment-2026-02-21T05-34-30.md' | relative_url }})
+- [`multi-size-experiment-2026-02-21.json`]({{ '/assets/data/experiments/2026-02-21/multi-size-experiment-2026-02-21.json' | relative_url }})
 
 Comparison reference:
 
