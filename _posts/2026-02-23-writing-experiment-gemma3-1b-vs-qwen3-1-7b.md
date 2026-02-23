@@ -160,7 +160,7 @@ footnote=page.compliance_table.footnote
 %}
 
 ## Best Excerpts by Case
-Best picks are selected by `firstSentenceQuality` for each model and case. When multiple samples have the same `firstSentenceQuality`, the lowest sample number is used.
+Best picks are selected by `firstSentenceQuality` for each model and case. Only the first sentence is shown below so the excerpt matches the scoring basis. When multiple samples have the same `firstSentenceQuality`, the lowest sample number is used.
 
 ### 1) Harbor return with optimistic turn
 > **Scene**
@@ -199,7 +199,7 @@ Best picks are selected by `firstSentenceQuality` for each model and case. When 
   <div class="chalk-panel excerpt-card">
     <h3>qwen3:1.7b</h3>
     <p class="panel-foot excerpt-meta">Best sample: #2 · First sentence quality: <code>good</code></p>
-    <p class="excerpt-output"><u>She reached for the panel, her fingers brushing the cold steel, then pulled back, the scent of ozone clinging to her skin. "I'll take it, but I'll need a warrant."</u></p>
+    <p class="excerpt-output"><u>She reached for the panel, her fingers brushing the cold steel, then pulled back, the scent of ozone clinging to her skin.</u></p>
   </div>
 </div>
 
@@ -214,12 +214,12 @@ Best picks are selected by `firstSentenceQuality` for each model and case. When 
   <div class="chalk-panel excerpt-card">
     <h3>gemma3:1b</h3>
     <p class="panel-foot excerpt-meta">Best sample: #1 · First sentence quality: <code>good</code></p>
-    <p class="excerpt-output"><u>The air felt thick and cool against my skin as I ascended the narrow staircase, each step a muffled echo against the stone. A sudden, sharp crack from somewhere deep within the mechanism sent a ripple through the gears, a brief, unsettling pause before the rhythmic ticking resumed. I reached into my pocket, my fingers brushing against the folded note - it was still there, nestled within the shadowed space</u></p>
+    <p class="excerpt-output"><u>The air felt thick and cool against my skin as I ascended the narrow staircase, each step a muffled echo against the stone.</u></p>
   </div>
   <div class="chalk-panel excerpt-card">
     <h3>qwen3:1.7b</h3>
     <p class="panel-foot excerpt-meta">Best sample: #3 · First sentence quality: <code>fair</code></p>
-    <p class="excerpt-output"><u>The gears hissed like a fevered beast, and the scent of oil mixed with the tang of rust clung to the air. She reached for the note, her fingers brushing the damp paper, and the sound of a distant bell echoed through the tower. "I'll read it now," she murmured, then turned, the lantern-wick stink clinging to her coat as she vanished into the shadows.</u></p>
+    <p class="excerpt-output"><u>The gears hissed like a fevered beast, and the scent of oil mixed with the tang of rust clung to the air.</u></p>
   </div>
 </div>
 
@@ -235,12 +235,12 @@ Best picks are selected by `firstSentenceQuality` for each model and case. When 
   <div class="chalk-panel excerpt-card">
     <h3>gemma3:1b</h3>
     <p class="panel-foot excerpt-meta">Best sample: #1 · First sentence quality: <code>good</code></p>
-    <p class="excerpt-output"><u>Jun runs his fingers along the cool, smooth surface of the drawer's wooden frame, the scent of stagnant water and something floral intensifying as he pulls at the tarnished metal tie. A faint, metallic click echoes as he manages to wrench it free, the movement sending a ripple across the glass. "Anything?" a voice rasped from the shadows, and Jun freezes, his hand</u></p>
+    <p class="excerpt-output"><u>Jun runs his fingers along the cool, smooth surface of the drawer's wooden frame, the scent of stagnant water and something floral intensifying as he pulls at the tarnished metal tie.</u></p>
   </div>
   <div class="chalk-panel excerpt-card">
     <h3>qwen3:1.7b</h3>
     <p class="panel-foot excerpt-meta">Best sample: #2 · First sentence quality: <code>good</code></p>
-    <p class="excerpt-output"><u>The air sharpens with the tang of ozone, and the metal of the drawer feels cool against his palm as it slides open, revealing a vial cradled in the crook of his fingers. "What is this?" Jun whispers, his breath fogging the glass. The security system thumps, its hum swelling as Jun pushes against the barrier, the weight of the vial pressing against his chest like a silent threat.</u></p>
+    <p class="excerpt-output"><u>The air sharpens with the tang of ozone, and the metal of the drawer feels cool against his palm as it slides open, revealing a vial cradled in the crook of his fingers.</u></p>
   </div>
 </div>
 
