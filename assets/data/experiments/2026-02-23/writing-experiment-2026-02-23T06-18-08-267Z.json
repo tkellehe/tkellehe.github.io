@@ -1,0 +1,916 @@
+{
+  "timestamp": "2026-02-23T06:18:08.267Z",
+  "description": "Combined writing experiment results filtered to gemma3:1b and qwen3:1.7b",
+  "models": [
+    "gemma3:1b",
+    "qwen3:1.7b"
+  ],
+  "cases": [
+    {
+      "id": "harbor-return-positive",
+      "fileName": "01.json",
+      "title": "Harbor return with optimistic turn",
+      "request": "Write the next single sentence from Mara's close third-person perspective.",
+      "rulesBlob": "Keep prose concrete and sensory.\nStay in close third-person limited POV on Mara.\nAvoid cliches and avoid adverbs ending in -ly.\nPrefer specific nouns and verbs over abstract phrasing.",
+      "scenePlan": "Mara arrives at the harbor before dawn, expecting to find evidence destroyed.\nThe middle beat reveals she might still recover the ledger.\nThis moment should pivot the tension in a positive direction without ending the scene.",
+      "sceneSoFar": "Fog drifted between the pilings and softened the warning lights to bruised orange smears.\nMara counted the empty slips along the pier where the cutter should have been tied.\nAt the end she found only black water, a loop of severed rope, and her own breath clouding in the cold.",
+      "reversal": "positive"
+    },
+    {
+      "id": "skybridge-cache-positive",
+      "fileName": "02.json",
+      "title": "Skybridge dead-drop with cautious relief",
+      "request": "Write the next two sentences from Mara's close third-person perspective, including exactly one line of dialogue.",
+      "rulesBlob": "Set the scene in a plausible near-future city with grounded tech details.\nStay in close third-person limited POV on Mara.\nKeep sentences lean and concrete. Emphasize physical actions and sensory cues.\nAvoid cliches and avoid adverbs ending in -ly.\nUse dialogue sparingly. No more than one dialogue tag in the output.\nDo not resolve the conflict. End with forward motion or a new complication.",
+      "scenePlan": "Mara crosses an elevated transit skybridge during shift change, expecting the dead-drop panel to be cleared by security.\nThe middle beat reveals the cache is still there, intact, and she can reach it for a moment.\nThis moment should pivot the tension in a positive direction, but introduce a fresh risk that keeps the scene moving.",
+      "sceneSoFar": "The skybridge hummed with mag-rail vibration, and the glass beneath her palm held a faint chill that smelled of ozone and disinfectant.\nAd panels along the ceiling cycled through breakfast spots and rent-by-the-hour pods, washing the crowd in pale blues and pinks.\nMara kept to the edge, matching the pace of commuters with lanyards and coffee bulbs, while her thumb worried the cracked corner of her old ID card.\nA maintenance drone hovered near the access hatch, its camera iris clicking as it tracked faces; she angled her chin down and let a couple arguing about surge fares drift between them.\n\"If you want to file a complaint, take it up with the algorithm,\" one of them snapped, and Mara used the raised voices as cover to slip behind a structural rib.\nThe dead-drop panel was still there, a narrow rectangle of brushed steel with a tiny service notch, and the security seal she expected to find was missing.",
+      "reversal": "positive"
+    },
+    {
+      "id": "clocktower-confession-positive",
+      "fileName": "03.json",
+      "title": "Clocktower confession with hopeful risk",
+      "request": "Write the next single paragraph of exactly four sentences in first-person past tense from Celia's perspective, including exactly one line of dialogue.",
+      "rulesBlob": "Write in first-person past tense from Celia.\nKeep prose concrete and sensory. Include at least one sound detail and one smell detail.\nDo not use semicolons. Do not start any sentence with the word \"I\".\nInclude exactly one line of dialogue in quotation marks.\nAvoid the words: \"heart\", \"destiny\", \"soul\".\nEnd the paragraph with a clear next action that does not resolve the conflict.",
+      "scenePlan": "Celia climbs into the city clocktower at night, expecting her hidden confession note to have been removed.\nThe middle beat reveals the note is still there, protected in a place only she would think to check.\nThis moment pivots the tension in a positive direction because she has proof, but introduces a fresh danger that forces immediate movement.",
+      "sceneSoFar": "The clocktower stairs narrowed to a ribbed iron ladder, slick with condensation that left her gloves smelling of pennies.\nAbove, the gears ticked and clacked like teeth, each turn sending a tremor through the stone.\nCelia paused beneath the dial face where moonlight seeped through the numerals, and she felt the draft tug at the papers inside her coat.\nSomeone had been here recently; fresh boot grit freckled the landing, and a lantern-wick stink still hung in the air.",
+      "reversal": "positive"
+    },
+    {
+      "id": "glass-garden-negative",
+      "fileName": "04.json",
+      "title": "Conservatory retrieval with alarmed setback",
+      "request": "Write the next three sentences in close third-person limited, present tense, from Jun's perspective. Include exactly two lines of dialogue.",
+      "rulesBlob": "Write in present tense in close third-person limited on Jun.\nKeep prose concrete and sensory. Include at least one smell detail and one tactile detail.\nInclude exactly two lines of dialogue in quotation marks. Do not use dialogue tags (no 'he said', 'she asked').\nInclude exactly one onomatopoeia (example: 'click', 'whirr', 'thunk').\nDo not use the words: \"suddenly\", \"just\", \"seemed\".\nEnd the final sentence with Jun taking a physical action that increases urgency without resolving the scene.",
+      "scenePlan": "Jun slips into a climate-controlled glass conservatory after hours to retrieve a labeled seed vial from a locked drawer.\nThe middle beat reveals the drawer is already ajar and the vial is within reach.\nThis moment pivots the tension in a negative direction when the security system engages and a new obstacle blocks Jun's exit, without ending the scene.",
+      "sceneSoFar": "The conservatory's glass panes bead with condensation, and the air tastes like wet soil and coppery fertilizer.\nJun moves between tall rows of citrus trees under grow lights that buzz with a faint electric heat against his cheeks.\nA maintenance cart sits abandoned beside the central fountain, its battery panel open and a coil of insulated wire spilling onto the tile.\nHe reaches the propagation station where the gene-safe drawer should be sealed with a numbered tie, but the tie hangs in two clean halves.\nInside, foam slots cradle empty vials, all except one with a white label stamped: KESTREL-03.",
+      "reversal": "negative"
+    }
+  ],
+  "results": [
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The salt spray tasted of iron on her lips as she scanned the water.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 1194,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 16,
+        "totalTokens": 305
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The rain tasted metallic, a cold kiss against her lips as she traced the faded ink.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 1100,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 19,
+        "totalTokens": 308
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The salt spray tasted faintly of something lost, a ghost of a memory clinging to the damp wood.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 896,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 21,
+        "totalTokens": 310
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "A single, metallic tang of brine filled the air, sharp and unwelcome against her nostrils.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 1425,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 19,
+        "totalTokens": 308
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "The scent of brine and decay filled the air, a stark contrast to the last’s grim tableau.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 1393,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 22,
+        "totalTokens": 311
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "The salt spray tasted sharp against her lips as she traced the pattern of the wreckage.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 621,
+      "usage": {
+        "promptTokens": 289,
+        "completionTokens": 18,
+        "totalTokens": 307
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The metal panel yielded with a sharp groan, and Mara slid beneath it, the air immediately colder despite the mag-rail’s residual warmth.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 4145,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 30,
+        "totalTokens": 536
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The metal of the panel felt smooth beneath her fingertips, surprisingly warm despite the chill. A faint, metallic scent clung to the air, like old blood.",
+      "sentenceCount": 2,
+      "oneSentenceCompliant": false,
+      "durationMs": 4508,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 33,
+        "totalTokens": 539
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The metal of the panel felt slick beneath her gloved fingers as she adjusted the latch, a faint scent of burnt plastic rising from the depths.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 4202,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 30,
+        "totalTokens": 536
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "The cold metal of the panel felt strangely yielding beneath my fingertips as I reached for it, the air thick with the scent of old wiring.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 4514,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 29,
+        "totalTokens": 535
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "The cold metal of the dead-drop panel offered a brief, uncomfortable warmth against my palm. A single, perfect crimson rose lay nestled within the notch, defying the sterile backdrop.",
+      "sentenceCount": 2,
+      "oneSentenceCompliant": false,
+      "durationMs": 5711,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 38,
+        "totalTokens": 544
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "The metal cool beneath her fingers confirmed the panel was still there, a stubbornly solid rectangle amidst the automated chaos. A single, misplaced maintenance drone drifted closer, its lens focusing on her silhouette.",
+      "sentenceCount": 2,
+      "oneSentenceCompliant": false,
+      "durationMs": 4916,
+      "usage": {
+        "promptTokens": 506,
+        "completionTokens": 40,
+        "totalTokens": 546
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The air felt thick and cool against my skin as I ascended the narrow staircase, each step a muffled echo against the stone. A sudden, sharp crack from somewhere deep within the mechanism sent a ripple through the gears, a brief, unsettling pause before the rhythmic ticking resumed. I reached into my pocket, my fingers brushing against the folded note – it was still there, nestled within the shadowed space",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 6578,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The air grew thick and cold as I ascended, the scent of wet stone and something vaguely medicinal rising from the passage below. Dust motes danced in the pale moonlight illuminating the massive gears, each one a slow, rhythmic pulse. I reached for the small, folded note tucked into the cavity beneath the dial, my fingers tracing the worn paper. “It’s here,” a voice",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4143,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The air smelled thick with the metallic scent of old brass and something faintly floral, like dried lilies – a peculiar juxtaposition that unsettled her. A low groan emanated from the massive gears beneath her feet, a rhythmic vibration that resonated through the stone floor. She cautiously approached the dial, her fingers tracing the intricate patterns, searching for a discrepancy. “It’s here,” she whispered,",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4318,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "The air smelled thick with the metallic tang of rain and the faint, unsettling scent of old wax from a forgotten display case. A low, rhythmic grinding echoed from the immense gears beneath her feet, a constant, insistent pulse against her bones. Celia scanned the space near the base of the clock, her fingers tracing the rough edges of a chipped marble, searching for the familiar, folded paper. “",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4293,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "The air was thick with the smell of wet stone and something vaguely metallic, like old blood – a scent clinging to the lower levels of the tower. A single, insistent drip echoed from a leaky pipe further down, a rhythmic pulse against the silence. Celia pulled a small, folded note from beneath a loose panel in the dial, its paper yellowed and brittle. “It’",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4625,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "The air within the clocktower was thick with the metallic scent of aging brass and a faint, lingering sweetness – perhaps lavender from a forgotten bouquet. She carefully navigated the narrow steps, each footfall echoing with a resonant thud against the stone. Reaching the dial, she spotted a small, folded piece of parchment tucked beneath a particularly large number, its edges stained with a dark, persistent",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 5934,
+      "usage": {
+        "promptTokens": 415,
+        "completionTokens": 80,
+        "totalTokens": 495
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "Jun runs his fingers along the cool, smooth surface of the drawer’s wooden frame, the scent of stagnant water and something floral intensifying as he pulls at the tarnished metal tie. A faint, metallic *click* echoes as he manages to wrench it free, the movement sending a ripple across the glass. “Anything?” a voice rasped from the shadows, and Jun freezes, his hand",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 7859,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The air hangs thick and heavy with the sharp, earthy scent of wet soil and a faint, metallic tang – the coppery smell of the fertilizer clinging to the walls. Jun carefully reaches out, the cool, smooth surface of the drawer’s wooden frame a stark contrast to the sticky residue coating his fingertips, and pulls a vial free. A low *thunk* echoed from the base of the",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 6790,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "Jun carefully pressed against the cool, smooth surface of the drawer’s edge, the metal cold beneath his fingertips as he maneuvered his weight to unlock the mechanism. A faint, sickly sweet smell, like overripe fruit and something metallic, drifted from the drawer’s interior, intensifying as he lifted the heavy brass latch. A low hum began, a grating *whirr* emanating from the",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 7877,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 4,
+      "output": "The faint smell of damp earth and metallic citrus hangs heavy in the air as Jun carefully slides his hand along the smooth, cool surface of the drawer’s handle, the metal cold beneath his fingertips. A low *thrum* emanated from the activation panel, and the lights overhead flickered, plunging the room into momentary darkness. “It’s here,” a voice rasped from",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 7062,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 5,
+      "output": "The humid air hung heavy, thick with the sharp, metallic scent of dried citrus and the lingering odor of old wax. Jun carefully ran a gloved hand along the cool, smooth surface of the drawer’s wood, feeling the faint resistance of the metal clasp before pulling it open. A metallic *click* echoed in the stillness, followed by the unmistakable sound of a red light flashing on the",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 7410,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 6,
+      "output": "The scent of damp earth and the metallic tang of fertilizer intensified as Jun carefully pulled the drawer’s handle, the brass cool beneath his fingertips. A faint, insistent *thrum* emanated from the drawer’s mechanism, a vibration that resonated through the floorboards. “It’s here,” a voice rasped, and Jun felt a prickle of unease as the lock",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 7291,
+      "usage": {
+        "promptTokens": 471,
+        "completionTokens": 80,
+        "totalTokens": 551
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "She traced the rope's path to the dock's edge, where the ledger's leather scent clung to the wet sand.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 5692,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 298,
+        "totalTokens": 578
+      },
+      "quality": "good",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The fog blurred the edge of the pier, but Mara’s fingers tightened around the ledger’s edge, its pages damp with sweat, as the wind whispered a promise she couldn’t yet hear.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3690,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 286,
+        "totalTokens": 566
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "She finds the ledger tucked beneath the rope, its pages brittle but intact, as the fog retreats into the morning haze.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3733,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 288,
+        "totalTokens": 568
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "She found the ledger tucked beneath the rusted keel, its pages brittle with age, as the morning light seeped through the fog, offering a fragile promise of redemption.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3214,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 254,
+        "totalTokens": 534
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "The ledger slipped from the water's grip, its edges frayed but the ink still legible, as Mara's breath fogged the cold air, a fragile hope blooming in the dawn's brittle light.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3561,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 276,
+        "totalTokens": 556
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "She uncovered the ledger tucked beneath the pilings, its pages brittle with age, as the fog whispered secrets she hadn't heard before.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3091,
+      "usage": {
+        "promptTokens": 280,
+        "completionTokens": 239,
+        "totalTokens": 519
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The drone's camera iris flickered, capturing her movement.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 11725,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 871,
+        "totalTokens": 1356
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "She reached for the panel, her fingers brushing the cold steel, then pulled back, the scent of ozone clinging to her skin. \"I'll take it, but I'll need a warrant.\"",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 3715,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 287,
+        "totalTokens": 772
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The drone's hum sharpened as she moved, its sensors flickering with the same pulse she'd once felt in the alley.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 2193,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 163,
+        "totalTokens": 648
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "The drone's eye flickered, tracking her movement.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 2315,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 175,
+        "totalTokens": 660
+      },
+      "quality": "fair",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "",
+      "sentenceCount": 0,
+      "oneSentenceCompliant": false,
+      "durationMs": 13147,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 1000,
+        "totalTokens": 1485
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "She pulled the panel's service notch, her fingers trembling as the faint glow of the cache's indicator flickered, revealing a message scrawled in bloodstained ink. The algorithm had already begun learning.",
+      "sentenceCount": 2,
+      "oneSentenceCompliant": false,
+      "durationMs": 6088,
+      "usage": {
+        "promptTokens": 485,
+        "completionTokens": 482,
+        "totalTokens": 967
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The gears groaned as she climbed, the lantern-wick stink clinging to her skin, and the draft pulled at the papers inside her coat, whispering secrets only she could hear. \"I didn't think anyone would stay here long enough to notice...\" She stepped back, the lantern-wick stink clinging to her skin, and the gears groaned as she climbed.",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 5073,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 372,
+        "totalTokens": 783
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The gears' groan reverberated through the stairwell, mingling with the damp, iron-tinged breath of the night, as she unfastened the note’s ribbon, its brittle scent clinging to her fingers, and slipped it into her pocket, the lantern-wick stink still clinging to the air, she heard a distant bell tolls, urging her to follow. \"Did you know the clocktower’s gears were always this loud?\" she whispered, pulling the ribbon free. She turned, the shadow of the stairwell stretching behind her, the draft lifting the note’s edges, and the sound of the bell’s tolls echoed in her ears, driving her forward.",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 5141,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 395,
+        "totalTokens": 806
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The gears hissed like a fevered beast, and the scent of oil mixed with the tang of rust clung to the air. She reached for the note, her fingers brushing the damp paper, and the sound of a distant bell echoed through the tower. “I’ll read it now,” she murmured, then turned, the lantern-wick stink clinging to her coat as she vanished into the shadows.",
+      "sentenceCount": 3,
+      "oneSentenceCompliant": false,
+      "durationMs": 6130,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 477,
+        "totalTokens": 888
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 4,
+      "output": "The gears' rhythmic screech wrapped around her ankle as she pulled the ladder free, the lantern-wick stink clinging to her hair like a shroud. \"I can't believe it's still here,\" she murmured, her fingers brushing the brittle paper. The draft hissed through the crack, carrying the scent of burning cedar, and she pressed her palm to the cold metal of the dial, its surface etched with invisible fingerprints. She had to find the note before the shadows stirred again.",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4950,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 386,
+        "totalTokens": 797
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 5,
+      "output": "The metal railing creaked under her weight as she leaned against the cold, damp wall, the lantern-wick stink clinging to her hair like a forgotten promise, \"They didn’t remove it—this is why I came back,\" she whispered, her breath fogging the glass, and the gears’ grinding hum reverberated through the stone, urging her forward.",
+      "sentenceCount": 1,
+      "oneSentenceCompliant": true,
+      "durationMs": 3461,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 266,
+        "totalTokens": 677
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 6,
+      "output": "The gears' clatter echoed in her ears as she reached for the note, its brittle edges crinkling under her fingers, the damp air clinging to her skin like a second skin—*“I’ll find the note before the shadows close in.”* She pressed her palm to the cold metal, her breath fogging the glass.",
+      "sentenceCount": 2,
+      "oneSentenceCompliant": false,
+      "durationMs": 4751,
+      "usage": {
+        "promptTokens": 411,
+        "completionTokens": 369,
+        "totalTokens": 780
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The air thickens with the sharp tang of ozone and the slick sheen of wet stone, and the drawer’s steel hinges click open with a hiss, revealing the vial’s glass surface etched with a faint, cold shimmer. “What the hell…?” Jun mutters, his fingers brushing the vial’s rim, the rough texture of the metal硌 against his palm. The security system thunks its alarm, and Jun’s breath fogs the glass, the scent of burnt plastic clinging to his neck. Jun pulls the vial toward him, the metal of the drawer’s edge biting into his palm, the sound of the alarm echoing in the quiet.",
+      "sentenceCount": 5,
+      "oneSentenceCompliant": false,
+      "durationMs": 5462,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 394,
+        "totalTokens": 853
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The air sharpens with the tang of ozone, and the metal of the drawer feels cool against his palm as it slides open, revealing a vial cradled in the crook of his fingers. \"What is this?\" Jun whispers, his breath fogging the glass. The security system thumps, its hum swelling as Jun pushes against the barrier, the weight of the vial pressing against his chest like a silent threat.",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 5842,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 447,
+        "totalTokens": 906
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The air smells like wet soil and coppery fertilizer, clinging to his nostrils as he leans against the drawer’s cold, polished surface. The wire coil beneath his fingers feels brittle, its warmth a stark contrast to the frost clinging to the glass. “Jun, you’re not supposed to be here,” the voice hisses, and the security system clicks, its sound a hollow, tinny thump that vibrates through his bones. Jun slams the drawer shut, the metal creaking like a wounded thing, but the system’s glow flickers, casting jagged shadows across the floor.",
+      "sentenceCount": 4,
+      "oneSentenceCompliant": false,
+      "durationMs": 4858,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 372,
+        "totalTokens": 831
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "good"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 4,
+      "output": "",
+      "sentenceCount": 0,
+      "oneSentenceCompliant": false,
+      "durationMs": 13094,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 1000,
+        "totalTokens": 1459
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 5,
+      "output": "",
+      "sentenceCount": 0,
+      "oneSentenceCompliant": false,
+      "durationMs": 13230,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 1000,
+        "totalTokens": 1459
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "bad"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 6,
+      "output": "The air smells like burnt toast and rust, and the metal of the drawer feels cold against his palm as he presses against it. \"Wait—maybe I can just... bypass it?\" Jun murmurs, his voice swallowed by the hum of the grow lights. The security system clicks, and the coil of wire shivers beneath his feet. Jun takes a step back, his boots scraping against the tile, the sound of the click growing louder.",
+      "sentenceCount": 6,
+      "oneSentenceCompliant": false,
+      "durationMs": 4264,
+      "usage": {
+        "promptTokens": 459,
+        "completionTokens": 327,
+        "totalTokens": 786
+      },
+      "quality": "bad",
+      "firstSentenceQuality": "fair"
+    }
+  ]
+}

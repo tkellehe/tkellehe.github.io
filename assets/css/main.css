@@ -653,6 +653,123 @@ h2 {
   font-size: 0.95rem;
 }
 
+.writing-quality-grid {
+  margin-top: 0.95rem;
+}
+
+.quality-column-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.quality-column-shell {
+  margin-top: 0.3rem;
+  padding: 0.62rem 0.55rem;
+  border: 1px solid rgba(255, 226, 182, 0.26);
+  border-radius: 0.62rem;
+  background: rgba(18, 12, 9, 0.45);
+}
+
+.quality-column {
+  width: min(140px, 100%);
+  height: 260px;
+  margin: 0 auto;
+  border-radius: 0.52rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 226, 182, 0.22);
+  background: rgba(12, 8, 6, 0.82);
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-segment {
+  display: block;
+  width: 100%;
+}
+
+.quality-segment.good {
+  background: linear-gradient(180deg, #56d381 0%, #2fa95b 100%);
+}
+
+.quality-segment.fair {
+  background: linear-gradient(180deg, #fae073 0%, #ddb53a 100%);
+}
+
+.quality-segment.bad {
+  background: linear-gradient(180deg, #ea7676 0%, #be4848 100%);
+}
+
+.quality-metrics {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.quality-metrics li {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  font-size: 0.84rem;
+}
+
+.quality-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.quality-dot.good {
+  background: #41c070;
+}
+
+.quality-dot.fair {
+  background: #e3c14c;
+}
+
+.quality-dot.bad {
+  background: #cb5656;
+}
+
+.quality-legend {
+  margin-top: 0.62rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 0.9rem;
+  font-size: 0.84rem;
+}
+
+.quality-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.excerpt-grid {
+  margin-top: 0.58rem;
+}
+
+.excerpt-card h3 {
+  margin-bottom: 0.2rem;
+}
+
+.excerpt-meta {
+  margin-top: 0.12rem;
+}
+
+.excerpt-output {
+  margin: 0.5rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.52;
+}
+
+.excerpt-output u {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.16em;
+}
+
 .chalk-table-wrap {
   margin-top: 0.74rem;
   overflow-x: auto;

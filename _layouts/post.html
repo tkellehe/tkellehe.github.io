@@ -13,7 +13,8 @@ layout: default
       <p class="read-time">{{ page.read_time }}</p>
     {% endif %}
     {% if page.lede %}
-      <p class="lede">{{ page.lede }}</p>
+      {% assign lede_html = page.lede | markdownify | strip %}
+      <p class="lede">{{ lede_html | remove: '<p>' | remove: '</p>' }}</p>
     {% endif %}
   </header>
   <div class="post-content experiment-content">
