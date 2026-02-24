@@ -27,6 +27,13 @@ compliance_table:
     - ["gemma3:1b", "15 / 24 (62.5%)", "9 / 24 (37.5%)"]
     - ["qwen3:1.7b", "14 / 24 (58.3%)", "10 / 24 (41.7%)"]
   footnote: "If the model went over one sentence, it was marked as a request violation."
+compounding_risk_table:
+  headers: ["Steps (N)", "P(at least 1 bad) gemma3:1b", "P(at least 1 bad) qwen3:1.7b"]
+  rows:
+    - ["10", "98.27%", "99.09%"]
+    - ["20", "99.97%", "99.99%"]
+    - ["40", "99.999991%", "99.999999%"]
+  footnote: "Computed from first-sentence bad rates in this run: gemma3:1b = 33.3%, qwen3:1.7b = 37.5%."
 ---
 - **Run timestamp:** February 23, 2026 (`2026-02-23T06:18:08.267Z`)
 - **Models:** `gemma3:1b` and `qwen3:1.7b`
@@ -243,6 +250,38 @@ Best picks are selected by `firstSentenceQuality` for each model and case. Only 
     <p class="excerpt-output"><u>The air sharpens with the tang of ozone, and the metal of the drawer feels cool against his palm as it slides open, revealing a vial cradled in the crook of his fingers.</u></p>
   </div>
 </div>
+
+## Compounding Failure Risk Across Iterations
+If any continuation step is unusable, the full draft now needs repair work at that point. This is the same structure as a [series reliability model](https://www.itl.nist.gov/div898/handbook/apr/section1/apr182.htm), where success compounds by multiplication.
+
+Let:
+- `p_bad` = probability a single generated step is bad (unusable)
+- `N` = number of generation steps in the full story
+
+Then:
+- `P(all usable) = (1 - p_bad)^N`
+- `P(at least one bad step) = 1 - (1 - p_bad)^N` (complement rule: [reference](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_%28Shafer_and_Zhang%29/03%3A_Basic_Concepts_of_Probability/3.02%3A_Complements_Intersections_and_Unions))
+- `E[# bad steps] = N * p_bad`
+
+Using this run's first-sentence bad rates (`gemma3:1b = 33.3%`, `qwen3:1.7b = 37.5%`):
+
+{% include components/chalk-table-panel.html
+title="At Least One Bad Step vs Iteration Count"
+headers=page.compounding_risk_table.headers
+rows=page.compounding_risk_table.rows
+footnote=page.compounding_risk_table.footnote
+%}
+
+At `N = 40`, a clean one-shot run is effectively non-viable at these rates, and expected rewrite load is high:
+- `gemma3:1b`: `E[# bad] = 40 * 0.333 = 13.3`
+- `qwen3:1.7b`: `E[# bad] = 40 * 0.375 = 15.0`
+
+You can also invert this to set a target bad rate for one-shot generation quality:
+- `p_bad <= 1 - R^(1/N)` where `R` is desired clean-run probability.
+- Example: with `N = 40` and `R = 50%`, you need `p_bad <= 1.72%`.
+- Example: with `N = 500` and `R = 50%`, you need `p_bad <= 0.14%`.
+
+These calculations assume independent errors. In autoregressive generation, mistakes can feed forward and amplify, so real long-form failure risk is often worse than this baseline.
 
 ## Takeaways
 1. `qwen3:1.7b` leads this run on `good + fair` (37.5% vs 29.2%).
