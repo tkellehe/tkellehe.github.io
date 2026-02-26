@@ -88,6 +88,62 @@ rows=page.comparison_table.rows
 footnote=page.comparison_table.footnote
 %}
 
+### Visual quality mix comparison (old first-sentence vs this rerun)
+This chart compares:
+- **Old run:** `2026-02-23` gemma3:1b **first-sentence** quality mix
+- **This run:** `2026-02-25` gemma3:1b rerun quality mix
+
+<div class="chalk-grid writing-quality-grid">
+  <div class="chalk-panel quality-column-card">
+    <h3>2026-02-23 (first sentence)</h3>
+    <div class="quality-column-shell">
+      <div
+        class="quality-column"
+        role="img"
+        aria-label="2026-02-23 gemma3:1b first sentence quality mix: 29.2 percent good, 37.5 percent fair, 33.3 percent bad."
+      >
+        <span class="quality-segment good" style="height: 29.2%"></span>
+        <span class="quality-segment fair" style="height: 37.5%"></span>
+        <span class="quality-segment bad" style="height: 33.3%"></span>
+      </div>
+    </div>
+    <ul class="quality-metrics">
+      <li><span class="quality-dot good"></span> Good: 7 / 24 (29.2%)</li>
+      <li><span class="quality-dot fair"></span> Fair: 9 / 24 (37.5%)</li>
+      <li><span class="quality-dot bad"></span> Bad: 8 / 24 (33.3%)</li>
+    </ul>
+  </div>
+
+  <div class="chalk-panel quality-column-card">
+    <h3>2026-02-25 rerun</h3>
+    <div class="quality-column-shell">
+      <div
+        class="quality-column"
+        role="img"
+        aria-label="2026-02-25 gemma3:1b rerun quality mix: 5.0 percent good, 77.0 percent fair, 18.0 percent bad."
+      >
+        <span class="quality-segment good" style="height: 5.0%"></span>
+        <span class="quality-segment fair" style="height: 77.0%"></span>
+        <span class="quality-segment bad" style="height: 18.0%"></span>
+      </div>
+    </div>
+    <ul class="quality-metrics">
+      <li><span class="quality-dot good"></span> Good: 5 / 100 (5.0%)</li>
+      <li><span class="quality-dot fair"></span> Fair: 77 / 100 (77.0%)</li>
+      <li><span class="quality-dot bad"></span> Bad: 18 / 100 (18.0%)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="chalk-panel">
+  <h3>Legend</h3>
+  <p class="quality-legend">
+    <span><i class="quality-dot good"></i> Good = definitely should be used in the story</span>
+    <span><i class="quality-dot fair"></i> Fair = could be used in the story</span>
+    <span><i class="quality-dot bad"></i> Bad = definitely should not be used in the story</span>
+  </p>
+</div>
+
 The baseline reference is the post linked above. This rerun expands the test suite and updates scoring, so the comparison is directional, not perfectly apples-to-apples. The deltas are still large enough to be meaningful for workflow planning:
 
 - `fair+good`: `29.2%` -> `82.0%` (**+52.8 points**)
