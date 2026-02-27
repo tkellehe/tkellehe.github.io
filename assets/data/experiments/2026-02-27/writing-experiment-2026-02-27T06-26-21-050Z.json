@@ -1,0 +1,2766 @@
+{
+  "timestamp": "2026-02-27T06:26:21.050Z",
+  "models": [
+    "gemma3:1b"
+  ],
+  "defaults": {
+    "samplesPerCase": 3,
+    "temperature": 0.9,
+    "maxTokens": 80,
+    "dryRun": false
+  },
+  "cases": [
+    {
+      "id": "harbor-return-positive",
+      "fileName": "01.json",
+      "title": "Harbor return with a hidden foothold",
+      "request": "Write the next single sentence in close third-person limited, past tense, staying inside Mara's perceptions.",
+      "rulesBlob": "Keep the prose concrete and sensory (at least one smell or sound).\nStay tightly in Mara's body and attention; no information she couldn't notice right now.\nAvoid clichés and avoid adverbs ending in -ly.\nUse specific nouns and active verbs; no abstract moralizing.\nLet the sentence tilt the moment toward hope without resolving the problem.",
+      "scenePlan": "Before dawn, Mara reaches the harbor expecting the cutter and its ledger to be gone for good.\nShe finds signs of interference—missing boat, severed rope—and braces for a clean erase.\nThe next sentence should reveal a small, plausible trace she can act on immediately, shifting the tension in a positive direction.",
+      "sceneSoFar": "Fog drifted between the pilings, turning the dock lights into bruised orange halos.\nThe tide slapped the barnacled wood with a slow, impatient rhythm, carrying the stink of diesel and kelp.\nMara counted the empty slips along the pier where the cutter should have been tied, her gloved fingers still numb from the walk.\nAt the end she found only black water, a loop of severed rope, and her own breath pooling white in the cold.",
+      "reversal": "positive"
+    },
+    {
+      "id": "skybridge-cache-positive",
+      "fileName": "02.json",
+      "title": "Skybridge dead-drop with a narrow window",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Mara's perspective.",
+      "rulesBlob": "Anchor the near-future setting with one grounded tech detail (not magic-tech).\nKeep the sentence lean and physical—hands, breath, surfaces, motion.\nNo spoken dialogue; no interior monologue in italics.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd on a fresh risk or constraint that keeps Mara moving.",
+      "scenePlan": "During shift change, Mara crosses a crowded transit skybridge expecting the dead-drop to be swept by security.\nShe discovers the panel is unsealed and the cache is still reachable for a moment.\nThe next sentence should show her committing to the grab while a new danger tightens around her.",
+      "sceneSoFar": "The skybridge hummed with mag-rail vibration, and the glass beneath her palm held a faint chill that smelled of ozone and disinfectant.\nAd panels along the ceiling cycled through breakfast deals and rent-by-the-hour pods, washing the crowd in pale blues and pinks.\nMara kept to the edge, matching the pace of commuters with lanyards and coffee bulbs while her thumb worried the cracked corner of her obsolete ID chip.\nA maintenance drone hovered near the access hatch, its camera iris clicking as it tracked faces; she angled her chin down and let a couple arguing about surge fares drift between them.\nThe dead-drop panel was still there, a narrow rectangle of brushed steel with a tiny service notch, and the security seal she expected to find was missing.",
+      "reversal": "positive"
+    },
+    {
+      "id": "clocktower-confession-positive",
+      "fileName": "03.json",
+      "title": "Clocktower confession with proof still breathing",
+      "request": "Write the next single sentence in first-person past tense from Celia's perspective.",
+      "rulesBlob": "Do not begin the sentence with the word \"I\".\nInclude at least one sound detail and one smell detail.\nInclude exactly one quoted utterance (one set of quotation marks), and do not use a dialogue tag.\nDo not use semicolons.\nAvoid the words: \"heart\", \"destiny\", \"soul\".\nEnd with Celia taking an immediate next action that raises the stakes.",
+      "scenePlan": "Celia climbs the clocktower at night expecting her hidden confession note to have been taken.\nThe lantern smell and boot grit suggest someone searched the place recently.\nThe next sentence should confirm the note is still protected where she hid it, then push her into motion because danger is close.",
+      "sceneSoFar": "The clocktower stairs narrowed to a ribbed iron ladder slick with condensation that left her gloves smelling of pennies.\nAbove, the gears ticked and clacked like teeth, each turn sending a tremor through the stone.\nMoonlight seeped through the dial numerals and striped the landing where a scatter of fresh boot grit darkened the dust.\nA lantern-wick stink still hung in the air, warm and greasy against the cold.",
+      "reversal": "positive"
+    },
+    {
+      "id": "glass-garden-negative",
+      "fileName": "04.json",
+      "title": "Conservatory retrieval as alarms wake",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Jun's perspective.",
+      "rulesBlob": "Keep the sentence concrete and sensory, including one smell detail and one tactile detail.\nInclude exactly one onomatopoeia (a sound word such as \"click\" or \"thunk\").\nInclude exactly one quoted utterance (one set of quotation marks), and do not use a dialogue tag.\nDo not use the words: \"suddenly\", \"just\", \"seemed\".\nEnd with Jun taking a physical action that increases urgency without resolving the scene.",
+      "scenePlan": "Jun sneaks into a climate-controlled glass conservatory after hours to retrieve a labeled seed vial from a locked drawer.\nThe drawer is already ajar and the vial is within reach, implying someone else has been here.\nThe next sentence should pivot the tension negative as security wakes or an exit is blocked, forcing Jun to act fast.",
+      "sceneSoFar": "Condensation beads on the conservatory panes, and the air tastes of wet soil and coppery fertilizer.\nJun moves between citrus trees under grow lights that buzz heat against his cheeks.\nA maintenance cart sits abandoned beside the fountain, its battery panel open and a coil of insulated wire spilling onto the tile.\nHe reaches the propagation station where the gene-safe drawer should be sealed with a numbered tie, but the tie hangs in two clean halves.\nInside, foam slots cradle empty vials, all except one with a white label stamped: KESTREL-03.",
+      "reversal": "negative"
+    },
+    {
+      "id": "river-bargain-mixed",
+      "fileName": "05.json",
+      "title": "River spirit bargain under a snagged moon",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Asha's perspective.",
+      "rulesBlob": "Lean into tactile, watery imagery (cold, current, slick wood) without using the word \"magic\".\nInclude one brief inner thought as plain text (no italics).\nAvoid clichés and avoid adverbs ending in -ly.\nLet the sentence offer a small gain with a clear cost attached.\nDo not include any spoken dialogue.",
+      "scenePlan": "Asha comes to the river with an offering, hoping to buy back something the water took from her.\nThe river answers in a way that feels personal, almost kind.\nThe next sentence should grant Asha a usable clue or token, but bind her to an unsettling promise.",
+      "sceneSoFar": "The river ran black under the willows, thick with fallen leaves that spun in slow eddies.\nAsha knelt on the root-snarled bank and set three copper coins on a flat stone slick with algae.\nThe air smelled of mud and crushed mint where her knee ground into the plants.\nShe held her breath and dipped her hand into the current, letting it numb her fingers up to the wrist.\nSomething brushed her palm from underneath, gentle as a fish, and the coins on the stone trembled as if a nearby footstep had reached them.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "airlock-microfracture-negative",
+      "fileName": "06.json",
+      "title": "Orbital airlock with a hairline crack",
+      "request": "Write the next single sentence in first-person present tense from the station mechanic's perspective.",
+      "rulesBlob": "Keep it hard-science grounded: mention one concrete instrument reading (pressure, O2, temperature) with a number.\nNo metaphors or similes.\nInclude one sound detail.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a decisive physical action that makes the situation more urgent, not safer.",
+      "scenePlan": "A mechanic performs a routine cycle on an aging orbital airlock during a quiet shift.\nA microfracture reveals itself through an unexpected reading and a sound that shouldn't be there.\nThe next sentence should confirm the problem is worsening and force an immediate, risky response.",
+      "sceneSoFar": "The inner hatch wheel fought me the way it always did, then gave with a familiar jerk.\nMy flashlight beam skated over the seal groove and the pressure equalization valve housing.\nA thin line ran across the composite ring, so fine I thought it was a scratch until it caught the light at the wrong angle.\nThe status panel blinked through its cycle prompts, each one delayed by a fraction of a second longer than normal.",
+      "reversal": "negative"
+    },
+    {
+      "id": "station-glove-1889-positive",
+      "fileName": "07.json",
+      "title": "Train platform with a returned glove",
+      "request": "Write the next single sentence in close third-person limited, past tense, from the young woman's perspective, without using any character names.",
+      "rulesBlob": "Keep diction appropriate to the late 19th century; avoid modern slang.\nInclude one small period detail (fabric, ticketing, steam, gaslight).\nDo not use any proper nouns (no named places, brands, or people).\nAvoid clichés and avoid adverbs ending in -ly.\nLet the sentence tilt toward connection while keeping uncertainty alive.",
+      "scenePlan": "On a crowded platform, she believes the chance meeting is already lost in the rush.\nA small object left behind becomes a reason to turn back.\nThe next sentence should offer a hopeful opening—without resolving whether the other person will accept it.",
+      "sceneSoFar": "Steam pooled low along the rails and dampened the hems of skirts as porters shouted over the bell.\nShe clutched her carpetbag with stiff fingers, the leather handle biting through her gloves.\nA gloved hand had helped her onto the step a moment ago, then vanished into the press of coats and parasols.\nNow, by the edge of the bench, a single kid glove lay crumpled as if it had been dropped in haste.\nShe lifted it and found a faint trace of lavender soap in the lining.",
+      "reversal": "positive"
+    },
+    {
+      "id": "basement-laughter-negative",
+      "fileName": "08.json",
+      "title": "Basement door with laughter that isn't yours",
+      "request": "Write the next single sentence in second-person present tense.",
+      "rulesBlob": "Build dread through ordinary objects and sound, not gore.\nInclude one parenthetical fragment that interrupts the thought.\nAvoid the words: \"ghost\", \"demon\", \"monster\".\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with you making a choice that you know is a mistake.",
+      "scenePlan": "You come downstairs to check a noise you told yourself was plumbing.\nThe house offers a familiar smell and an unfamiliar sound, forcing you to admit someone else might be here.\nThe next sentence should sharpen that fear and push you across a threshold you didn't want to cross.",
+      "sceneSoFar": "The stairwell smells like old paint and dryer lint, warmer than the rest of the house.\nYour phone light makes the handrail shine in short flashes between your fingers.\nAt the bottom step, the concrete floor is damp where the dehumidifier overflowed last week.\nFrom behind the closed storage-room door comes a thin, childlike giggle that stops the moment you stop moving.",
+      "reversal": "negative"
+    },
+    {
+      "id": "cooking-show-sabotage-positive",
+      "fileName": "09.json",
+      "title": "Live cooking segment with a missing ingredient",
+      "request": "Write the next single sentence in first-person past tense from the host's perspective.",
+      "rulesBlob": "Keep the tone comedic but not slapstick; the humor should come from observation under pressure.\nInclude one sensory detail about smell or taste.\nInclude exactly one piece of stage-direction in square brackets, like [camera two].\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a small improvisation that saves the moment—while hinting someone caused the problem.",
+      "scenePlan": "A live segment goes sideways when the host realizes a key ingredient is missing.\nThe audience and crew keep smiling, forcing the host to perform competence.\nThe next sentence should land an improvised fix and plant suspicion without naming a culprit.",
+      "sceneSoFar": "The studio lights turned my cutting board into a spotlight, and the overhead monitors showed my hands ten times larger than they felt.\nI lifted the lid on the prep bowl and stared at empty glass where a mound of chopped basil should have been.\nThe audience clapped on cue anyway, a polite wave of sound that made my stomach sink.\nAcross the counter, the sous-chef's smile held in place like tape.",
+      "reversal": "positive"
+    },
+    {
+      "id": "noir-alley-match-negative",
+      "fileName": "10.json",
+      "title": "Alleyway stakeout and a damp match",
+      "request": "Write the next single sentence in first-person past tense from the detective's perspective.",
+      "rulesBlob": "Hard-boiled voice: sharp, concrete, slightly cynical.\nInclude exactly one simile that does not involve weather.\nDo not use the word \"rain\" or \"raining\".\nAvoid clichés (no \"city that never sleeps\", no \"neon\" unless earned).\nEnd with a new detail that proves someone has been watching the detective.",
+      "scenePlan": "The detective waits in an alley behind a club, expecting the drop to happen on schedule.\nThe setting feels empty until a small failure—like a match that won't catch—signals the night is off-script.\nThe next sentence should deliver a subtle but undeniable sign of surveillance.",
+      "sceneSoFar": "The alley smelled of old fryer grease and wet cardboard, and the bricks sweated in the dark.\nI pinched a match from the book and struck it against my thumbnail, but it hissed out before the tip could catch.\nSomewhere beyond the dumpsters, bass from the club thudded through the wall like a second pulse.\nI tried another match and listened to my own breath, counting the seconds between passing cars.",
+      "reversal": "negative"
+    },
+    {
+      "id": "saloon-sunstruck-mixed",
+      "fileName": "11.json",
+      "title": "Saloon doorway with a waited-for stranger",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Deputy Ortiz's perspective.",
+      "rulesBlob": "Use plain, punchy language; avoid flowery description.\nInclude one sound effect word (an onomatopoeia).\nNo contractions.\nAvoid clichés about the West (no \"tumbleweed\", no \"draw\" as a noun).\nEnd with Ortiz noticing a detail that changes who holds the advantage.",
+      "scenePlan": "A deputy waits in a dusty saloon for a wanted man to step through the door.\nThe room is tense enough that small sounds carry.\nThe next sentence should shift the balance—either toward safety or toward danger—based on a sharp observation.",
+      "sceneSoFar": "Heat pressed against the front windows, turning the glass into pale, wavering mirrors.\nDeputy Ortiz kept his back to the bar, fingers resting on the worn wood instead of his holster.\nA piano player picked at a tune with only his right hand, letting the left hover as if he might bolt.\nWhen the batwing doors creaked, every boot on the floor stopped moving at once.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "laundromat-whispers-positive",
+      "fileName": "12.json",
+      "title": "Midnight laundromat where clothes speak softly",
+      "request": "Write the next single sentence in first-person present tense from the narrator's perspective.",
+      "rulesBlob": "Magical realism tone: the impossible is treated as ordinary.\nPersonify at least one inanimate object.\nInclude one Spanish word or phrase, unitalicized, without translation.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a gentle reveal that offers help but not a solution.",
+      "scenePlan": "The narrator comes to a laundromat late at night to wash away more than dirt.\nThe machines and garments seem to know private things.\nThe next sentence should offer a small kindness from the setting that nudges the narrator forward.",
+      "sceneSoFar": "The laundromat is empty except for the change machine that keeps clearing its throat with a metallic cough.\nMy quarters sit in my palm like cold teeth as I watch the dryers spin strangers' socks into little storms.\nA lone shirt on the folding table lifts one sleeve, then lets it fall as if waving me closer.\nWhen I open the washer, the damp air smells like soap and something older, like paper kept in a drawer for years.",
+      "reversal": "positive"
+    },
+    {
+      "id": "underworld-lyre-negative",
+      "fileName": "13.json",
+      "title": "A singer at the edge of the underworld stair",
+      "request": "Write the next single sentence in close third-person limited, present tense, from the singer's perspective, without using any proper names.",
+      "rulesBlob": "Keep the imagery stark: stone, ash, thin air, distant water.\nDo not use any proper nouns.\nInclude one sensory detail that is not visual (sound, smell, taste, touch).\nAvoid the words: \"fate\", \"destiny\".\nEnd with the singer realizing the bargain has a hidden clause.",
+      "scenePlan": "The singer descends to retrieve a lost beloved, believing skill and sincerity will be enough.\nThe underworld listens without expression.\nThe next sentence should reveal a rule that makes success harder than expected.",
+      "sceneSoFar": "Cold stone steps drop into a dark that does not change no matter how long he stares.\nEach breath tastes of iron and old smoke, and the air sits heavy in his lungs.\nHis fingers find the strings by memory, and the first notes shiver out into the corridor like a question.\nSomewhere far below, water drips in a patient, steady count.",
+      "reversal": "negative"
+    },
+    {
+      "id": "ration-line-stamp-positive",
+      "fileName": "14.json",
+      "title": "Ration queue with a stamp that almost works",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Rin's perspective.",
+      "rulesBlob": "Use bureaucratic language for one short phrase (e.g., a form label or policy term).\nInclude one concrete number that matters.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue; keep it in Rin's immediate sensory experience.\nEnd with a complication triggered by the very thing that looks like good news.",
+      "scenePlan": "Rin waits in a ration line expecting their allotment to be denied again.\nA small administrative error or glitch appears to favor Rin for once.\nThe next sentence should show the hopeful turn—then snap in a new problem that puts Rin at risk.",
+      "sceneSoFar": "The queue snakes between concrete barriers painted with fading arrows, and the air smells of boiled cabbage from the canteen vents.\nRin keeps their card flat against their thigh to warm the embedded chip, pretending the tremor in their hands is from the cold.\nAt the window, the clerk slides the scanner over the barcode and frowns at the screen's green glow.\nA stamp pad sits beside the register, its ink surface cracked like dry riverbed.",
+      "reversal": "positive"
+    },
+    {
+      "id": "museum-laser-grid-mixed",
+      "fileName": "15.json",
+      "title": "Museum gallery with lasers and a borrowed keycard",
+      "request": "Write the next single sentence in second-person present tense.",
+      "rulesBlob": "Include exactly one colon in the sentence.\nMention one specific body part and one specific tool.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue; keep the tension physical and immediate.\nEnd with the sense that you have bought seconds, not safety.",
+      "scenePlan": "You slip into a darkened gallery after hours to steal a small, priceless object.\nThe lasers are active, but the old keycard still opens one maintenance panel.\nThe next sentence should show a clever, risky adjustment that keeps you moving while raising the chance of detection.",
+      "sceneSoFar": "The gallery lights are off, but the display cases glow faintly like aquariums.\nA grid of red beams slices the air in steady lines from wall to wall, too clean to be smoke and too bright to ignore.\nYour stolen keycard still smells like someone else's cologne, warm plastic under your thumb.\nIn the center, the artifact sits on black velvet, small enough to fit in your fist and heavy enough to ruin your life.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "courtroom-misdirection-negative",
+      "fileName": "16.json",
+      "title": "Cross-examination as a witness changes the story",
+      "request": "Write the next single sentence in close third-person limited, past tense, from attorney Park's perspective.",
+      "rulesBlob": "Keep it courtroom-realistic: refer to one concrete object in the room (exhibit sticker, microphone, legal pad).\nInclude one Latin legal term (e.g., \"prima facie\", \"voir dire\", \"subpoena\").\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue; the sentence should live in Park's observation and calculation.\nEnd with Park recognizing a trap that has already been sprung.",
+      "scenePlan": "Attorney Park believes the witness will confirm the timeline that supports the defense.\nA small inconsistency appears in the witness's materials or demeanor.\nThe next sentence should mark the turn: the testimony is about to hurt more than help.",
+      "sceneSoFar": "The courtroom air smelled faintly of old carpet and burnt coffee from the hallway urn.\nPark's legal pad was already half full of underlines and arrows, the pen leaving dents in the paper when his grip tightened.\nOn the witness stand, the man adjusted the microphone and glanced down at the exhibit binder as if he had just noticed the tabs.\nA yellow sticker marked EXHIBIT 12 on the corner of the photo, but the date printed beneath it did not match Park's notes.",
+      "reversal": "negative"
+    },
+    {
+      "id": "climbing-wall-slip-negative",
+      "fileName": "17.json",
+      "title": "Indoor climb with a hold that spins",
+      "request": "Write the next single sentence in second-person present tense.",
+      "rulesBlob": "Include at least one tactile detail (chalk, rubber, grit) and one sound detail.\nAvoid any mention of fear; show it through body and choice.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with a movement that commits you upward when you should back down.",
+      "scenePlan": "You are one move from the top of an indoor route you've been chasing for weeks.\nA key hold behaves differently than it has before.\nThe next sentence should turn the attempt worse and force a split-second decision.",
+      "sceneSoFar": "Your fingers are pasted white with chalk, and the holds leave gritty crescents in your skin.\nThe gym air is warm and smells like rubber mats and detergent from the rental shoes.\nBelow, the belayer's device clicks in a steady rhythm as slack comes in.\nYou reach for the blue sloper that has always felt like a bad handshake, and it shifts a fraction under your palm.",
+      "reversal": "negative"
+    },
+    {
+      "id": "tea-shop-clue-positive",
+      "fileName": "18.json",
+      "title": "Tea shop back room and a misplaced key",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Evelyn's perspective.",
+      "rulesBlob": "Cozy tone: tension without graphic violence.\nInclude one smell detail involving tea or spices.\nAvoid clichés and avoid adverbs ending in -ly.\nInclude one specific, ordinary object that becomes suspicious.\nEnd with Evelyn deciding to check something she should not.",
+      "scenePlan": "Evelyn cleans up after closing, still thinking about the missing patron and the odd call from the constable.\nIn the quiet back room, a small inconsistency hints at what really happened.\nThe next sentence should reveal a promising clue and push Evelyn toward a risky next step.",
+      "sceneSoFar": "The last customer had gone an hour ago, but the front bell still quivered whenever a bus passed outside.\nEvelyn stacked saucers in the sink and breathed in bergamot and clove from the day’s spilled blends.\nThe back room was dim, lit only by the red EXIT sign that painted everything the color of jam.\nOn the office desk, the ledger lay open to a blank page, and the teacup beside it was still warm.",
+      "reversal": "positive"
+    },
+    {
+      "id": "mod-parlor-consent-mixed",
+      "fileName": "19.json",
+      "title": "Body-mod parlor with a contract you did not sign",
+      "request": "Write the next single sentence in first-person present tense from Kaito's perspective.",
+      "rulesBlob": "Ground the cyberpunk tech in physical detail (tools, sterilization, interfaces).\nInclude one corporate-sounding product name (invented), capitalized.\nAvoid clichés and avoid adverbs ending in -ly.\nInclude one short sentence fragment separated by an em dash.\nEnd with Kaito noticing a consent detail that changes everything.",
+      "scenePlan": "Kaito comes in for a routine upgrade, expecting a clean swap and a quick exit.\nThe clinic feels professional until paperwork and interfaces reveal something off.\nThe next sentence should deliver a tantalizing benefit and a chilling catch at the same time.",
+      "sceneSoFar": "The parlor smells of antiseptic and warmed plastic, sweet in the back of my throat.\nA tray of sealed needles sits under a UV hood that hums like a tired insect.\nThe tech taps my wrist display to wake the intake form, and a translucent contract blooms above my skin.\nAt the bottom, the signature field shows my name in strokes I do not recognize.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "airship-valve-negative",
+      "fileName": "20.json",
+      "title": "Airship engine room with a sabotaged valve",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Captain Rooke's perspective.",
+      "rulesBlob": "Steampunk texture: brass, oil, heat, steam pressure—make it tactile.\nInclude one precise mechanical term (e.g., \"flywheel\", \"pressure gauge\", \"relief valve\").\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with a choice that risks the ship to save the crew.",
+      "scenePlan": "In mid-flight, Captain Rooke checks the engine room after a tremor runs through the hull.\nA key component is wrong in a way that could be sabotage, not wear.\nThe next sentence should confirm the danger is imminent and force a hard decision.",
+      "sceneSoFar": "The engine room was hotter than the deck above, air thick with coal smoke and machine oil.\nRooke wiped his palm on his coat and felt grit of brass filings stick to the sweat at his wrist.\nThe pressure gauge needle sat too high, trembling as if it wanted to climb off the dial.\nBeside the boiler, the relief valve handle was wired shut with fresh copper twist.",
+      "reversal": "negative"
+    },
+    {
+      "id": "ruined-library-map-positive",
+      "fileName": "21.json",
+      "title": "Ruined library and a map in a book",
+      "request": "Write the next single sentence in first-person past tense from the scavenger's perspective.",
+      "rulesBlob": "Post-collapse realism: scavenging, scarcity, quiet danger.\nInclude one smell detail and one tactile detail.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with a discovery that feels like a way forward but draws attention.",
+      "scenePlan": "The scavenger enters a collapsed library hoping for paper, tools, or anything tradeable.\nThe building is unstable and not as empty as it looks.\nThe next sentence should reveal a valuable find that also increases risk.",
+      "sceneSoFar": "The front doors had fallen inward long ago, leaving a jagged mouth of glass and bent metal.\nDust hung in the sunbeams like slow snow, and it tasted of mildew when I breathed through my scarf.\nMy boots sank into soggy carpet, and the wet fibers chilled my toes even through the soles.\nIn the children's section, a toppled shelf pinned a hardback open as if someone had been reading when the roof came down.",
+      "reversal": "positive"
+    },
+    {
+      "id": "thorns-window-mixed",
+      "fileName": "22.json",
+      "title": "A princess at a window of thorns",
+      "request": "Write the next single sentence in close third-person limited, present tense, from the princess's perspective, without giving her a name.",
+      "rulesBlob": "Fairy-tale cadence with sharp edges; keep it simple but unsettling.\nInclude one sensory detail involving touch (splinters, thorns, cold stone).\nAvoid the words: \"tower\", \"curse\", \"spell\".\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the princess choosing an act of agency that is both brave and troubling.",
+      "scenePlan": "The princess has been kept behind living thorns for her 'protection' and told to wait for rescue.\nTonight, she realizes the thorns listen to her more than the guards do.\nThe next sentence should grant her a small power while hinting at the price of using it.",
+      "sceneSoFar": "The window was a square of night framed by briars that twined like fingers through the stone.\nShe pressed her forehead to the cold sill and watched a fox pick its way across the courtyard, silent as smoke.\nBehind her, the chamber smelled of beeswax and old linens, sweet and trapped.\nWhen she reached toward the thorn wall, the nearest branch leaned closer, as if waiting for instruction.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "first-contact-gift-positive",
+      "fileName": "23.json",
+      "title": "First contact table and an unexpected gift",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Leena's perspective.",
+      "rulesBlob": "Avoid the word \"alien\"; describe the other beings through specifics.\nInclude one sensory detail that is unfamiliar (a nonhuman sound, scent, or texture).\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with Leena recognizing a diplomatic opening that also makes her vulnerable.",
+      "scenePlan": "Leena sits at the first-contact table expecting miscommunication and defensive posturing.\nThe other side makes a move that reads as curiosity rather than threat.\nThe next sentence should be a positive pivot—an offering or signal—paired with a risk.",
+      "sceneSoFar": "The conference dome filtered the planet’s harsh daylight into a calm, pale wash across the long table.\nLeena kept her hands flat where the cameras could see them, fingers spread in the rehearsed gesture of openness.\nAcross from her, the visitors shifted their weight in a way that made the floor panels vibrate with a soft, harmonic buzz.\nA translucent membrane unfurled from one of them and rested a small object on the tabletop, glistening with moisture that did not evaporate.",
+      "reversal": "positive"
+    },
+    {
+      "id": "dinner-unstated-negative",
+      "fileName": "24.json",
+      "title": "Family dinner with a sentence that will not come out",
+      "request": "Write the next single sentence in first-person present tense without using any names.",
+      "rulesBlob": "Subtext-heavy: what is not said matters more than what is said.\nInclude one concrete object from the table setting (fork, bowl, napkin, glass).\nNo exclamation points and no rhetorical questions.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the narrator making a small action that reveals the tension to everyone.",
+      "scenePlan": "A family meal looks normal on the surface, but one truth is about to change the room.\nThe narrator hesitates, reading faces and rehearsing words.\nThe next sentence should turn the moment worse through a quiet slip or choice.",
+      "sceneSoFar": "The roast sits in the middle of the table, glossy under the kitchen light, and the smell is too rich for how little anyone eats.\nSomeone keeps refilling the water pitcher as if the sound of pouring can fill the silence.\nMy phone is face down by my plate, hot against the wood like it has its own pulse.\nAcross from me, two pairs of eyes lift and drop, lift and drop, waiting for whatever I promised I would say.",
+      "reversal": "negative"
+    },
+    {
+      "id": "trench-letter-positive",
+      "fileName": "25.json",
+      "title": "Trench line and a letter that arrives intact",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Sergeant Hale's perspective.",
+      "rulesBlob": "Ground it in immediate trench sensations: mud, cold, metal, damp paper.\nInclude one sound detail.\nAvoid the word \"blood\".\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with Hale doing something that risks discipline for the sake of that letter.",
+      "scenePlan": "Sergeant Hale receives a delivery in the trench, expecting nothing but orders or bad news.\nA personal letter appears, a rare intact piece of the old world.\nThe next sentence should make it a positive pivot that still pulls Hale toward danger or punishment.",
+      "sceneSoFar": "Mud sucked at Hale’s boots every time he shifted his weight, a slow pull that never let go.\nThe trench wall sweated, and the sandbags smelled of rot and wet burlap.\nSomewhere down the line, a machine gun rattled in short bursts, then stopped as if someone had covered its mouth.\nThe runner shoved a bundle into Hale’s hands, and the top envelope stayed miraculously dry under the oilcloth.",
+      "reversal": "positive"
+    },
+    {
+      "id": "aftershock-hero-mixed",
+      "fileName": "26.json",
+      "title": "After the fight, power flickers in the quiet",
+      "request": "Write the next single sentence in first-person past tense from the powered person's perspective.",
+      "rulesBlob": "Avoid superhero jargon and avoid the words: \"cape\", \"mask\", \"villain\", \"hero\".\nInclude one sensory detail about ozone, heat, or electricity.\nAvoid clichés and avoid adverbs ending in -ly.\nInclude one concrete regret expressed through an object or stain, not a confession.\nEnd with the power acting on its own in a way that complicates things.",
+      "scenePlan": "After a public confrontation, the narrator tries to hide and get control.\nThe physical aftermath tells a different story than the headlines will.\nThe next sentence should show a small win—privacy, a breath—immediately undercut by uncontrolled power.",
+      "sceneSoFar": "The stairwell was empty, but it still rang with the echo of boots that had chased me down ten flights.\nMy hands shook over the sink in the janitor closet, and the metal faucet was warm as if it had been running for hours.\nA smear of ash marked the wall where my shoulder had hit, black on white paint like a thumbprint too big to deny.\nI twisted the tap, hoping cold water would make me steady.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "manor-portrait-negative",
+      "fileName": "27.json",
+      "title": "Gothic manor and a portrait that should not watch",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Edmund's perspective.",
+      "rulesBlob": "Gothic atmosphere: damp stone, candle smoke, old wood, too-quiet rooms.\nInclude one smell detail and one sound detail.\nAvoid the words: \"haunted\", \"ghost\".\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with Edmund realizing the house has recorded his presence.",
+      "scenePlan": "Edmund returns to the ancestral manor to sign papers and leave quickly.\nThe building responds as if it recognizes him.\nThe next sentence should turn the discomfort into a specific, actionable threat.",
+      "sceneSoFar": "The corridor stretched longer than he remembered, the boards underfoot softened by years of damp.\nA single candle guttered in his hand, and its smoke smelled of tallow and something bitter.\nPortraits lined the walls, their varnish cracked into fine webs that caught the flame.\nWhen he paused before the largest canvas, the painted eyes seemed to shine as if they held their own light.",
+      "reversal": "negative"
+    },
+    {
+      "id": "subway-coin-ambiguous",
+      "fileName": "28.json",
+      "title": "Subway platform with a song and a coin",
+      "request": "Write the next single sentence in second-person present tense, without naming any characters.",
+      "rulesBlob": "Keep it grounded and tender; no melodrama.\nInclude one sound detail from the station and one detail about the instrument.\nInclude exactly one piece of visible text in quotation marks (a sign or ad slogan, not dialogue).\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a small gesture that could be kindness or something else.",
+      "scenePlan": "You wait for a late train and listen to a busker who plays like it matters.\nA small exchange begins between strangers without words.\nThe next sentence should make that exchange sharper—hinting at connection or risk.",
+      "sceneSoFar": "The platform smells like metal and stale popcorn, and the air moves each time a train passes on the far track.\nA musician sits on an overturned bucket, the guitar case open like a question at their feet.\nThe speaker above crackles and coughs before announcing a delay you already know.\nYou roll a coin between your fingers, watching the way the strings blur when the musician strums faster.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "survey-log-positive",
+      "fileName": "29.json",
+      "title": "Field survey log as the forest answers back",
+      "request": "Write the next single sentence as a log entry in first-person present tense, beginning with a timestamp in brackets like [14:03].",
+      "rulesBlob": "The entire output must be one sentence that begins with a bracketed timestamp.\nScientific, observational voice; no metaphors.\nInclude one measurement with units (°C, m, ppm, etc.).\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a surprising observation that suggests the environment is responding to the surveyor.",
+      "scenePlan": "A field scientist records routine observations in an isolated forest.\nThe data begins to deviate in a way that suggests pattern, not noise.\nThe next sentence should be a positive discovery that also raises eerie questions.",
+      "sceneSoFar": "[13:57] Set up the tripod sensor array at the base of the cedar stand; wind minimal.\n[13:58] Soil moisture reads higher than last week despite no recorded rain in the last five days.\n[14:00] Heard three distinct knocks from the north at regular intervals; no visual movement between trunks.\n[14:02] The CO₂ monitor drifted from baseline and then returned as if corrected by an unseen hand.",
+      "reversal": "positive"
+    },
+    {
+      "id": "jungle-temple-door-negative",
+      "fileName": "30.json",
+      "title": "Jungle temple door that breathes warm air",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Nadi's perspective.",
+      "rulesBlob": "Adventure tone with concrete danger; avoid pulp clichés.\nInclude one smell detail and one tactile detail (humidity, stone grit, sweat).\nAvoid clichés and avoid adverbs ending in -ly.\nInclude one local word for an object or concept (invented is fine) and make its meaning clear by context.\nEnd with the temple itself forcing the next move.",
+      "scenePlan": "Nadi reaches a half-buried temple after days in the jungle, hoping the rumors are true.\nThe entry yields, but the inside is alive with trapped heat and mechanisms.\nThe next sentence should turn the discovery into immediate peril.",
+      "sceneSoFar": "Vines as thick as rope hung from the carved lintel, dripping onto Nadi’s neck in slow, cold drops.\nHer machete was dull from hacking through bamboo, and the handle left blisters under the tape on her palm.\nBehind the stone door, a breath of warm air rolled out, smelling of bat guano and something sweet like overripe fruit.\nShe wedged her chisel into the seam—her kukra tool, the one her guide swore could wake old stone—and felt the slab shiver.",
+      "reversal": "negative"
+    },
+    {
+      "id": "bookstore-ladder-positive",
+      "fileName": "31.json",
+      "title": "Bookstore ladder and a shared reach",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Sam's perspective.",
+      "rulesBlob": "Rom-com warmth without snark.\nInclude one specific sensory detail (paper smell, dust, creak of wood).\nInclude the title of a book in quotation marks (invented is fine).\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with an invitation implied through action, not spoken words.",
+      "scenePlan": "Sam searches a small bookstore for a specific title to replace a lost copy.\nAnother customer reaches for the same shelf and causes an awkward near-collision.\nThe next sentence should tilt toward connection through a small, sincere gesture.",
+      "sceneSoFar": "The bookstore’s heater clicked on and filled the aisles with a dry, papery warmth.\nSam stood on the rolling ladder and ran a finger along spines, reading titles until the letters blurred.\nOn the top shelf, a worn copy of \"The Cartographer’s Blue\" leaned out as if it might fall.\nAt the same moment Sam reached for it, another hand appeared from the other side of the shelf, fingertips brushing the book’s edge.",
+      "reversal": "positive"
+    },
+    {
+      "id": "council-inkknife-mixed",
+      "fileName": "32.json",
+      "title": "Council chamber where ink becomes evidence",
+      "request": "Write the next single sentence in first-person present tense from the council scribe's perspective.",
+      "rulesBlob": "Formal, observant voice; the scribe notices power in small gestures.\nInclude one detail about writing tools (ink, quill, knife, blotter).\nAvoid the words: \"assassin\", \"plot\", \"conspiracy\".\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the scribe realizing their notes are dangerous to possess.",
+      "scenePlan": "The council debates a treaty in a room built for echoes and intimidation.\nA single off-script remark and a small reaction reveal the real stakes.\nThe next sentence should give the scribe a clue while placing them in peril.",
+      "sceneSoFar": "The chamber's dome caught every cough and turned it into a private announcement.\nMy ink froze at the tip of the quill as the minister across the table smiled without showing teeth.\nA servant set a silver tray down too close to the edge, and the knife used to cut wax seals flashed in the torchlight.\nWhen the envoy mentioned the border villages, three councilors looked at the same empty chair at once.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "friendly-dragon-cookie-positive",
+      "fileName": "33.json",
+      "title": "A small dragon wants a cookie",
+      "request": "Write the next single sentence in third-person limited, present tense, from the child's perspective.",
+      "rulesBlob": "Use simple, clear language suitable for children.\nKeep it gentle and funny; no scares.\nInclude one sound word (onomatopoeia) and one smell detail.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a small problem that feels solvable.",
+      "scenePlan": "A child discovers a tiny dragon hiding in the kitchen pantry.\nThe dragon is more hungry than dangerous and keeps causing little messes.\nThe next sentence should be a hopeful turn that creates a new, manageable challenge.",
+      "sceneSoFar": "The pantry door was open a crack, and warm air smelled like cinnamon and flour.\nInside, something rustled between the cereal boxes.\nA small green dragon poked its head out, crumbs on its snout like freckles.\nIt stared at the cookie jar on the top shelf and made a hopeful noise.",
+      "reversal": "positive"
+    },
+    {
+      "id": "memory-orangepeel-mixed",
+      "fileName": "34.json",
+      "title": "Orange peel memory in a quiet kitchen",
+      "request": "Write the next single sentence in first-person past tense.",
+      "rulesBlob": "Write one long, flowing sentence that uses at least one em dash.\nAnchor the emotion in sensory detail (smell, texture) rather than labels like \"sad\" or \"happy\".\nAvoid clichés and avoid adverbs ending in -ly.\nDo not use the word \"remember\" or \"memory\".\nEnd with an object being put somewhere it does not belong.",
+      "scenePlan": "In an ordinary kitchen, a small sensory trigger brings the narrator back to a complicated moment.\nThe narrator tries to stay present but keeps slipping into old patterns.\nThe next sentence should blend past and present in one breath and end with a telling action.",
+      "sceneSoFar": "The cutting board still held the damp circle where the orange had sat.\nWhen I rubbed my thumb over the peel, oil brightened my skin and the room filled with sharp sweetness.\nThe sink was full of plates that had not been mine, water cooled to gray over them.\nOutside the window, a neighbor's dog barked once and then went quiet, as if it too was listening.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "deepsea-hull-groan-negative",
+      "fileName": "35.json",
+      "title": "Deep-sea sub at crushing depth",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Dr. Sato's perspective.",
+      "rulesBlob": "Hard science tone: include one depth or pressure reading with units.\nInclude one sound detail from the sub (creak, ping, pump).\nNo metaphors or similes.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with Dr. Sato initiating a procedure that cannot be undone.",
+      "scenePlan": "Dr. Sato pilots a research sub deeper than it was rated to go, chasing a signal.\nThe environment presses in, and the sub begins to complain.\nThe next sentence should confirm danger and force a point-of-no-return action.",
+      "sceneSoFar": "The cabin lights flickered once, then held, casting the instruments in a steady green glow.\nOn the depth gauge, the numbers climbed past 3,900 m, the needle trembling at the edge of the red band.\nDr. Sato tasted recycled air and copper from the back of his own throat.\nThe hull made a low groan that traveled through the seat into his spine.",
+      "reversal": "negative"
+    },
+    {
+      "id": "therapy-clipboard-positive",
+      "fileName": "36.json",
+      "title": "Therapy session with an inconvenient breakthrough",
+      "request": "Write the next single sentence in first-person present tense.",
+      "rulesBlob": "Darkly humorous voice that admits discomfort without self-pity.\nInclude one parenthetical aside.\nAvoid the word \"feel\" in any form.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the narrator saying something true out loud for the first time—without quoting it as dialogue.",
+      "scenePlan": "A therapy session starts with practiced jokes and evasions.\nThe therapist's small gesture makes the narrator drop their guard.\nThe next sentence should be a breakthrough that is both funny and frightening.",
+      "sceneSoFar": "The office smells like herbal tea and printer toner, a combination that makes no sense but still exists.\nMy therapist holds her clipboard as if it is a shield, and I keep counting the staples in the carpet instead of meeting her eyes.\nI tell the story I always tell, the one with the punchline I have rehearsed for years.\nShe does not laugh; she just sets the pen down and waits.",
+      "reversal": "positive"
+    },
+    {
+      "id": "locked-room-draft-negative",
+      "fileName": "37.json",
+      "title": "Locked room with a draft from nowhere",
+      "request": "Write the next single sentence in close third-person limited, past tense, from the inspector's perspective, without giving the inspector a name.",
+      "rulesBlob": "Classic puzzle-mystery tone: precise observations, restrained emotion.\nInclude one rhetorical question.\nMention one physical clue related to doors or windows.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the inspector realizing the obvious solution is impossible.",
+      "scenePlan": "The inspector surveys a locked room where a death occurred with no apparent entry.\nEvery exit appears sealed, yet the scene contains a sign of movement.\nThe next sentence should deepen the puzzle and remove a comforting explanation.",
+      "sceneSoFar": "The study door was locked from the inside, the key still in the brass escutcheon.\nTwo windows overlooked the garden, both latched, their curtains drawn tight against the night.\nThe fire in the grate had died to a bed of pale ash, and the air smelled faintly of pipe tobacco.\nWhen the inspector stepped closer to the desk, a cold draft brushed the back of his hand as if someone had opened a door behind him.",
+      "reversal": "negative"
+    },
+    {
+      "id": "necromancer-cat-mixed",
+      "fileName": "38.json",
+      "title": "A cat watches its person do forbidden work",
+      "request": "Write the next single sentence in first-person present tense from the cat's perspective.",
+      "rulesBlob": "Cat voice: sensory, opinionated, focused on comfort and territory.\nRefer to the human only as \"my person\".\nInclude one smell detail and one sound detail.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the cat choosing whether to intervene.",
+      "scenePlan": "A cat observes its human preparing a ritual in the late-night kitchen.\nThe cat senses danger but also recognizes the human's grief.\nThe next sentence should reveal a small benefit of the ritual and the risk it brings into the home.",
+      "sceneSoFar": "My person has pushed the chairs back from the table, which is rude, because that is where I sleep when the sun is on the wood.\nThe air smells like candle wax and the sharp bite of dried herbs that make my nose wrinkle.\nA circle of salt lies on the floor, and my whiskers twitch when I lean too close to it.\nMy person whispers to a jar full of dark water, and the spoon inside it taps against the glass.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "loop-doorbell-negative",
+      "fileName": "39.json",
+      "title": "The doorbell rings the same way again",
+      "request": "Write the next single sentence in second-person present tense.",
+      "rulesBlob": "Include the exact phrase \"not again\" twice in the sentence.\nAvoid any explicit mention of time travel or loops.\nInclude one sound detail.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with you doing something different this time.",
+      "scenePlan": "A familiar event repeats: the doorbell, the knock, the same afternoon light.\nYou recognize the pattern before anyone else does.\nThe next sentence should capture that dread and force a new choice that might break things worse.",
+      "sceneSoFar": "The sun makes a rectangle on the living room rug, exactly the size of a welcome mat turned sideways.\nYour coffee has cooled to the point where it tastes like the mug.\nOutside, a car door closes, and the steps on the porch match the same cadence you heard yesterday.\nThe doorbell rings—three notes, too cheerful for what comes next.",
+      "reversal": "negative"
+    },
+    {
+      "id": "late-radio-static-mixed",
+      "fileName": "40.json",
+      "title": "Late-night radio and a caller who breathes wrong",
+      "request": "Write the next single sentence in first-person present tense as the radio host speaking on air.",
+      "rulesBlob": "The sentence must include exactly one instance of the onomatopoeia \"shhh\" to represent static.\nInclude one technical radio term (e.g., \"mic\", \"gain\", \"frequency\", \"dead air\").\nDo not describe any creature directly; imply through sound and reaction.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the host keeping the show going even as something feels wrong.",
+      "scenePlan": "A late-night host takes calls from insomniacs and lonely truckers.\nA caller comes through with a signal that feels too close and too old.\nThe next sentence should offer a creepy hint and a professional veneer at the same time.",
+      "sceneSoFar": "The studio is dim, lit by the console LEDs and the little red ON AIR sign that makes my coffee look blacker.\nI slide the fader up and hear the line open with breathing that does not match a human chest.\nMy producer points at the screen where the caller ID field is blank, then draws a finger across his throat in a joke that is not funny.\nI clear my throat into the mic and wait for a voice that does not arrive.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "negotiator-beep-negative",
+      "fileName": "41.json",
+      "title": "Hostage negotiation as the line beeps out",
+      "request": "Write the next single sentence in close third-person limited, present tense, from the negotiator's perspective.",
+      "rulesBlob": "No dialogue and no quoted text.\nInclude one specific sound detail (a beep, click, siren, etc.).\nAvoid clichés and avoid adverbs ending in -ly.\nKeep the focus on bodily reaction and professional protocol.\nEnd with the negotiator initiating a move that escalates the situation.",
+      "scenePlan": "A negotiator believes the conversation is stabilizing and time is on their side.\nA small signal suggests the person inside is about to act.\nThe next sentence should pivot negative and force the negotiator to take action.",
+      "sceneSoFar": "The hallway outside the apartment is dim and smells like old carpet and someone’s burned dinner.\nThe negotiator keeps one hand on the doorframe, feeling the vibration of voices inside through the plaster.\nOn the phone, the line is quiet long enough that every breath in the corridor feels amplified.\nA sharp electronic beep sounds in the negotiator’s ear as the call drops for half a second and returns.",
+      "reversal": "negative"
+    },
+    {
+      "id": "ballroom-silver-mixed",
+      "fileName": "42.json",
+      "title": "Enchanted ballroom and the silver waltz",
+      "request": "Write the next single sentence in second-person present tense.",
+      "rulesBlob": "Maintain a lush, romantic tone without using the word \"love\".\nInclude the color \"silver\" and one sound detail from music.\nAvoid clichés and avoid adverbs ending in -ly.\nInclude one sensory detail about fabric against skin.\nEnd with a choice that could be invitation or trap.",
+      "scenePlan": "You enter a ballroom that feels cut out of time, invited by a stranger whose face you cannot quite place.\nThe dance offers comfort and danger in equal measure.\nThe next sentence should tighten the spell of the moment and hint at the cost of staying.",
+      "sceneSoFar": "The doors swing shut behind you without a touch, sealing out the night air.\nCrystal chandeliers scatter light across the floor in pale shards, and every reflection looks a heartbeat late.\nA string quartet plays near the dais, the bow strokes a soft saw against the strings.\nA gloved hand waits for yours, palm up, and the room seems to hold its breath.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "android-noir-positive",
+      "fileName": "43.json",
+      "title": "A machine detective finds a warm fingerprint",
+      "request": "Write the next single sentence in first-person past tense from the android detective's perspective.",
+      "rulesBlob": "Noir voice with mechanical precision; blend detective insight with system-readouts.\nAvoid the word \"human\".\nInclude one short bracketed system note like [TEMP: ...] or [ERROR].\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with a clue that opens a path forward while revealing personal vulnerability.",
+      "scenePlan": "An android detective searches a crime scene that has been scrubbed clean.\nOne tiny inconsistency remains—something warmth cannot fake.\nThe next sentence should be a positive pivot: a lead, paired with risk to the android.",
+      "sceneSoFar": "The apartment smelled of solvent, the kind used to erase prints and stories.\nMy fingertips traced the edge of the kitchen counter where the laminate met cheap wood, reading texture like braille.\nThe window was closed, yet dust on the sill formed a crescent as if it had been disturbed minutes ago.\nWhen I laid my palm on the glass, a faint smear appeared, warmer than the room.",
+      "reversal": "positive"
+    },
+    {
+      "id": "rome-garum-mixed",
+      "fileName": "44.json",
+      "title": "Roman street with garum and whispered debts",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Livia's perspective.",
+      "rulesBlob": "Historical texture: mention one concrete Roman detail (toga, forum, stylus, denarius, etc.).\nInclude one Latin word, unitalicized, and make its meaning clear from context.\nInclude one smell detail.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with Livia realizing she has been recognized.",
+      "scenePlan": "Livia moves through a crowded Roman street to deliver a message tied to debt and politics.\nThe city is loud, ordinary, and dangerous in small ways.\nThe next sentence should offer a small advantage—access, cover—then twist into threat through recognition.",
+      "sceneSoFar": "The street was slick with yesterday’s rinse water, and sandals slapped stone in every direction.\nA vendor’s jar of garum stank in the heat, sharp and fishy enough to water her eyes.\nLivia kept her wax tablet tucked under her cloak, fingers tight around the stylus as if it were a knife.\nAt the corner near the forum, a man in a clean toga paused as though he had been waiting for her to pass.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "wildfire-evac-negative",
+      "fileName": "45.json",
+      "title": "Evacuation route under an orange sky",
+      "request": "Write the next single sentence in first-person present tense.",
+      "rulesBlob": "Include one smell detail (ash, smoke, melted plastic) and one sound detail (sirens, crackle, radio).\nAvoid the word \"fire\" and \"flames\"; describe without naming.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with the narrator realizing the planned route is gone.",
+      "scenePlan": "An evacuation is underway, and the narrator believes they can follow the map out.\nThe environment changes faster than information can update.\nThe next sentence should turn the situation worse by removing the safe path.",
+      "sceneSoFar": "The sky has turned the color of an old bruise, and the sun is a dull coin behind the haze.\nAsh sticks to my sweat and makes my arms look dusted with gray flour.\nThe car ahead of me creeps forward, brake lights glowing like embers in the thick air.\nA siren wails somewhere close, then warps as the sound hits the smoke and comes back wrong.",
+      "reversal": "negative"
+    },
+    {
+      "id": "kpi-meeting-mixed",
+      "fileName": "46.json",
+      "title": "Quarterly meeting where the slide deck bites back",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Dana's perspective.",
+      "rulesBlob": "Satirical corporate tone: use two pieces of business jargon naturally (e.g., \"synergy\", \"stakeholders\", \"bandwidth\").\nInclude one absurd but plausible metric (invented), written as a number with a unit or symbol.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with Dana noticing a quiet act of rebellion in the room.",
+      "scenePlan": "Dana sits through a quarterly meeting where leadership pretends everything is fine.\nA slide reveals uncomfortable truth in a sanitized format.\nThe next sentence should mix humor and tension: a ridiculous KPI and a human response that matters.",
+      "sceneSoFar": "The conference room smelled like marker ink and the lemon cleaner someone had used too late.\nDana’s laptop fan whined under the strain of the thirty-megabyte slide deck, and the projector cast everyone's faces in washed-out blue.\nOn screen, a bar chart labeled \"Customer Delight Trajectory\" climbed upward in defiance of the layoffs announced last week.\nThe VP clicked to the next slide and a tiny footnote appeared at the bottom, easy to miss if you were not looking for trouble.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "rowan-festival-negative",
+      "fileName": "47.json",
+      "title": "Village festival with rowan branches and too-old songs",
+      "request": "Write the next single sentence in close third-person limited, present tense, from Maeve's perspective.",
+      "rulesBlob": "Folk horror mood: warm community surface, cold undercurrent.\nMention rowan explicitly and one other plant or herb.\nInclude one sound detail (song, drum, chant).\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with Maeve realizing the ritual requires her specifically.",
+      "scenePlan": "Maeve attends the village festival expecting tradition and harmless pageantry.\nSmall details suggest the celebration is not for outsiders—or for choice.\nThe next sentence should turn the scene darker by making Maeve the focus.",
+      "sceneSoFar": "Lanterns swung from poles along the green, their light catching on ribbons and the shine of cider cups.\nA wreath of rowan branches hung over the main path, berries dark as beads, and people brushed their fingers against it as they passed.\nSomeone tucked sprigs of sage into sleeves like favors, and the smell rose when bodies moved close together.\nThe fiddlers started a tune that the crowd sang along to, but Maeve did not know the words, even though they sounded familiar.",
+      "reversal": "negative"
+    },
+    {
+      "id": "party-notification-mixed",
+      "fileName": "48.json",
+      "title": "House party and the notification that changes the room",
+      "request": "Write the next single sentence in first-person present tense.",
+      "rulesBlob": "YA voice: immediate, sensory, slightly self-conscious.\nInclude one notification sound written as an onomatopoeia (e.g., \"ding\", \"buzz\").\nInclude exactly one hashtag (invented), and do not include any real brand names.\nAvoid clichés and avoid adverbs ending in -ly.\nEnd with the narrator spotting who sent the message before anyone else does.",
+      "scenePlan": "At a crowded party, the narrator tries to look unbothered while watching someone across the room.\nA message hits the group chat and shifts the social gravity instantly.\nThe next sentence should deliver that shift and reveal a new angle on who is in control.",
+      "sceneSoFar": "The living room is all bodies and bass, and the air smells like citrus soda and somebody’s cheap cologne.\nI stand too close to the snack table because it gives my hands something to do besides shake.\nAcross the room, the person I came here to avoid laughs with a circle of friends like the whole house belongs to them.\nMy phone is in my back pocket, hot as a secret.",
+      "reversal": "neutral"
+    },
+    {
+      "id": "algae-bioreactor-positive",
+      "fileName": "49.json",
+      "title": "Colony greenhouse with algae that should not glow",
+      "request": "Write the next single sentence in close third-person limited, past tense, from Dr. Omondi's perspective.",
+      "rulesBlob": "Near-future realism: mention one specific piece of equipment (pump, filter, spectrometer, nutrient line).\nInclude one smell detail.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue.\nEnd with a discovery that could save the colony while hinting at a new problem.",
+      "scenePlan": "Dr. Omondi checks the algae bioreactor after a drop in oxygen output threatens the habitat.\nThe system behaves as if it has adapted without permission.\nThe next sentence should be a positive pivot—new output, new clue—with an unsettling implication.",
+      "sceneSoFar": "The greenhouse was humid enough to fog the visor, and the air smelled of wet plastic and green growth.\nOmondi followed the nutrient lines to the bioreactor tanks, listening for the steady churn of the circulation pumps.\nThe readout had been declining all week, each day a little less oxygen, each night a little more panic in the habitat meetings.\nNow, in the dark between inspection lights, the algae in Tank Three gave off a faint blue glow that the manuals did not mention.",
+      "reversal": "positive"
+    },
+    {
+      "id": "lipogram-note-mixed",
+      "fileName": "50.json",
+      "title": "A note written without the most common letter",
+      "request": "Write the next single sentence in first-person present tense, and do not use the letter \"e\" anywhere in the output.",
+      "rulesBlob": "Do not use the letter \"e\" anywhere in the sentence (lowercase or uppercase).\nKeep it coherent and story-driven, not a word-game explanation.\nAvoid clichés and avoid adverbs ending in -ly.\nNo dialogue and no quoted text.\nEnd with the narrator taking a clear physical action.",
+      "scenePlan": "The narrator finds a strange note that looks like a code because a common letter is missing.\nThe absence is intentional, signaling both intelligence and fear.\nThe next sentence should show the narrator understanding the warning and moving because of it.",
+      "sceneSoFar": "A folded scrap waits on my doormat, too clean for this dusty hall.\nInk marks run in tight rows, odd in a way I cannot put my thumb on at first.\nOn my kitchen counter, I sort it out: not a single \"e\" in any word, as if the writer cut a whole sound out of their mouth.\nThe last line ends with an arrow drawn toward my back door.",
+      "reversal": "neutral"
+    }
+  ],
+  "results": [
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "A faint, metallic scent, like old pennies, clung to the damp air.",
+      "durationMs": 25441,
+      "usage": {
+        "promptTokens": 386,
+        "completionTokens": 17,
+        "totalTokens": 403
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The salt-laden air smelled sharply of decaying fish.",
+      "durationMs": 4000,
+      "usage": {
+        "promptTokens": 386,
+        "completionTokens": 12,
+        "totalTokens": 398
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "harbor-return-positive",
+      "caseFile": "01.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The salt spray tasted bitter on her lips as she surveyed the wreckage, a faint, metallic scent rising from the disturbed water.",
+      "durationMs": 7020,
+      "usage": {
+        "promptTokens": 386,
+        "completionTokens": 26,
+        "totalTokens": 412
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "A sharp, brittle click echoed within the dead-drop’s hollow space, and a new metal tang assaulted her nostrils.",
+      "durationMs": 12949,
+      "usage": {
+        "promptTokens": 441,
+        "completionTokens": 26,
+        "totalTokens": 467
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "A faint metallic scent tickled her nostrils, and a single, misplaced panel yielded beneath her touch.",
+      "durationMs": 3749,
+      "usage": {
+        "promptTokens": 441,
+        "completionTokens": 21,
+        "totalTokens": 462
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "skybridge-cache-positive",
+      "caseFile": "02.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "A flicker of cold revealed a single, tarnished data-slate within the panel’s hollowed space.",
+      "durationMs": 6778,
+      "usage": {
+        "promptTokens": 441,
+        "completionTokens": 23,
+        "totalTokens": 464
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The lantern-wick smell still clung to the air, thick and unsettling, like a forgotten promise.",
+      "durationMs": 9486,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 21,
+        "totalTokens": 393
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The lantern-wick smell still clung to the air, a heavy, sweet scent overlaid with the sharp tang of woodsmoke from a nearby hearth.",
+      "durationMs": 5750,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 30,
+        "totalTokens": 402
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "clocktower-confession-positive",
+      "caseFile": "03.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The lantern-wick scent still clung to the landing, thick and unsettling like a forgotten promise.",
+      "durationMs": 3773,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 20,
+        "totalTokens": 392
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "A cold, metallic *click* echoes as the lock disengages, revealing the vial within a shadowed alcove.",
+      "durationMs": 10365,
+      "usage": {
+        "promptTokens": 429,
+        "completionTokens": 25,
+        "totalTokens": 454
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The faint, metallic *thunk* of the metal drawer latch echoes in the stillness, a chilling sound against the humid air.",
+      "durationMs": 6653,
+      "usage": {
+        "promptTokens": 429,
+        "completionTokens": 27,
+        "totalTokens": 456
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "glass-garden-negative",
+      "caseFile": "04.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "A faint *thunk* echoes from the drawer’s hinges as Jun’s gloved hand reaches for the vial.",
+      "durationMs": 6078,
+      "usage": {
+        "promptTokens": 429,
+        "completionTokens": 26,
+        "totalTokens": 455
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "river-bargain-mixed",
+      "caseFile": "05.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "A faint warmth lingered beneath my skin, a lingering echo of the water’s current pulling away.",
+      "durationMs": 8283,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 21,
+        "totalTokens": 412
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "river-bargain-mixed",
+      "caseFile": "05.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "A sudden warmth spread through my fingers, a faint echo of a lost memory—",
+      "durationMs": 2610,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 17,
+        "totalTokens": 408
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "river-bargain-mixed",
+      "caseFile": "05.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "A chilling warmth spread through my fingertips as the current released a faint, silver sheen.",
+      "durationMs": 6112,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 18,
+        "totalTokens": 409
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airlock-microfracture-negative",
+      "caseFile": "06.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The pressure equalization valve’s readings are plummeting, showing a drop of 0.3 percent – a signal confirming a catastrophic failure – and a low, resonant hum begins to emanate from the junction seal.",
+      "durationMs": 20226,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 44,
+        "totalTokens": 404
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airlock-microfracture-negative",
+      "caseFile": "06.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The microfracture expands, a crimson bloom spreading across the composite, and a low, guttural groan emanates from the cooling unit—a resonant vibration that makes my teeth ache.",
+      "durationMs": 15426,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 38,
+        "totalTokens": 398
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airlock-microfracture-negative",
+      "caseFile": "06.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The microfracture pulses, revealing a numerical reading of -0.037psi, a reading that shouldn’t be there, and a high-pitched whine – a fractured whine – echoes from the control panel’s ventilation shaft.",
+      "durationMs": 23262,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 50,
+        "totalTokens": 410
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "station-glove-1889-positive",
+      "caseFile": "07.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The small object, a single, tarnished glove, felt strangely warm beneath her fingers.",
+      "durationMs": 9762,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 19,
+        "totalTokens": 410
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "station-glove-1889-positive",
+      "caseFile": "07.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The leather held the ghost of a forgotten scent, a delicate whisper of something sweet and lost.",
+      "durationMs": 2889,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 20,
+        "totalTokens": 411
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "station-glove-1889-positive",
+      "caseFile": "07.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The glove felt strangely warm beneath her fingertips, a small, unexpected warmth amidst the cold iron of the platform.",
+      "durationMs": 6380,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 23,
+        "totalTokens": 414
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "basement-laughter-negative",
+      "caseFile": "08.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The chipped ceramic rooster on the windowsill seems to watch you, a silent accusation.",
+      "durationMs": 7807,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 17,
+        "totalTokens": 358
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "basement-laughter-negative",
+      "caseFile": "08.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The sound intensifies, a fractured melody of tiny bells, and you realize the familiar scent of lavender is overlaid with something metallic.",
+      "durationMs": 7773,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 27,
+        "totalTokens": 368
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "basement-laughter-negative",
+      "caseFile": "08.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The giggle echoes, a brittle note against the silence, and you realize it’s not coming from the storage room.",
+      "durationMs": 4349,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 25,
+        "totalTokens": 366
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "cooking-show-sabotage-positive",
+      "caseFile": "09.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The basil smelled faintly of burnt sugar, a disconcerting aroma that tickled my nose – a small, unsettling scent.",
+      "durationMs": 17066,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 25,
+        "totalTokens": 385
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "cooking-show-sabotage-positive",
+      "caseFile": "09.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The basil smelled overwhelmingly of sunshine and something vaguely…metallic, a scent I hadn’t anticipated, and it made my stomach twist.",
+      "durationMs": 10570,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 28,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "cooking-show-sabotage-positive",
+      "caseFile": "09.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The basil smelled overwhelmingly of sunshine and regret.",
+      "durationMs": 3980,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 10,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "noir-alley-match-negative",
+      "caseFile": "10.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The match sputtered, a pathetic, yellow sigh before collapsing into ash, a tiny, blackened footnote in the shadows.",
+      "durationMs": 8969,
+      "usage": {
+        "promptTokens": 364,
+        "completionTokens": 24,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "noir-alley-match-negative",
+      "caseFile": "10.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "It felt like a shadow, a cold, wet breath on my neck, holding the echo of a single, deliberate step.",
+      "durationMs": 6430,
+      "usage": {
+        "promptTokens": 364,
+        "completionTokens": 26,
+        "totalTokens": 390
+      },
+      "quality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "noir-alley-match-negative",
+      "caseFile": "10.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The silence felt thick, a wet cloth clinging to my skin.",
+      "durationMs": 2075,
+      "usage": {
+        "promptTokens": 364,
+        "completionTokens": 14,
+        "totalTokens": 378
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "saloon-sunstruck-mixed",
+      "caseFile": "11.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "A low *thump* echoed from the far corner, quickly silencing the piano's rhythm.",
+      "durationMs": 10236,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 21,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "saloon-sunstruck-mixed",
+      "caseFile": "11.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The piano player stopped, a single, sharp *thwack* echoing in the sudden quiet.",
+      "durationMs": 4065,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 21,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "saloon-sunstruck-mixed",
+      "caseFile": "11.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The air thickened, a slow, weighty silence pressing down, punctuated only by the distant *thump* of a horse’s hoof.",
+      "durationMs": 6282,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 29,
+        "totalTokens": 378
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "laundromat-whispers-positive",
+      "caseFile": "12.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The spinning clothes seem to whisper secrets, a silent, fluid conversation I can almost grasp.",
+      "durationMs": 5262,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 19,
+        "totalTokens": 369
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "laundromat-whispers-positive",
+      "caseFile": "12.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The dryer hums a quiet tune, a gentle vibration against my skin.",
+      "durationMs": 3058,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 16,
+        "totalTokens": 366
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "laundromat-whispers-positive",
+      "caseFile": "12.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The spinning clothes whisper secrets I cannot quite grasp, yet feel a slight warmth in my fingertips.",
+      "durationMs": 5028,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 20,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "underworld-lyre-negative",
+      "caseFile": "13.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "A low groan echoes from the depths as a shard of darkness catches the light.",
+      "durationMs": 6310,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 17,
+        "totalTokens": 356
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "underworld-lyre-negative",
+      "caseFile": "13.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "A faint, brittle echo whispers across the space.",
+      "durationMs": 5974,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 11,
+        "totalTokens": 350
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "underworld-lyre-negative",
+      "caseFile": "13.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "A low, resonant hum vibrates through the stone beneath his feet, a tangible weight in the silence.",
+      "durationMs": 4415,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 21,
+        "totalTokens": 360
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ration-line-stamp-positive",
+      "caseFile": "14.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The scanner whirs, registering a slight anomaly – a single digit missing from the barcode – and the clerk’s frown deepens, a fleeting flicker of something resembling approval in their eyes.",
+      "durationMs": 10407,
+      "usage": {
+        "promptTokens": 365,
+        "completionTokens": 39,
+        "totalTokens": 404
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ration-line-stamp-positive",
+      "caseFile": "14.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The scanner’s green light flickers, registering a single, unusual data point – 47.37% above the allocated allotment.",
+      "durationMs": 8534,
+      "usage": {
+        "promptTokens": 365,
+        "completionTokens": 30,
+        "totalTokens": 395
+      },
+      "quality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ration-line-stamp-positive",
+      "caseFile": "14.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The scanner clicks, a single, sterile sound echoing in the metallic chill.",
+      "durationMs": 2412,
+      "usage": {
+        "promptTokens": 365,
+        "completionTokens": 16,
+        "totalTokens": 381
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "museum-laser-grid-mixed",
+      "caseFile": "15.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "Your fingers trace the outline of the keycard, a tiny pressure point against the cold velvet, feeling it’s a worthwhile gamble.",
+      "durationMs": 7470,
+      "usage": {
+        "promptTokens": 346,
+        "completionTokens": 28,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "museum-laser-grid-mixed",
+      "caseFile": "15.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "You manipulate the keycard, pressing the last sequence, and the faint click of the mechanism reveals a hidden compartment, enough to buy seconds",
+      "durationMs": 4533,
+      "usage": {
+        "promptTokens": 346,
+        "completionTokens": 28,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "museum-laser-grid-mixed",
+      "caseFile": "15.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "You trace the precise pressure points on the keycard, the cold metal against your skin, a faint tremor running through your hand as you begin to raise the barrier",
+      "durationMs": 7509,
+      "usage": {
+        "promptTokens": 346,
+        "completionTokens": 33,
+        "totalTokens": 379
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "courtroom-misdirection-negative",
+      "caseFile": "16.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The man’s hand trembled slightly as he placed the photograph upon the table, a subtle tremor that mirrored the unsettling stillness of the room.",
+      "durationMs": 8884,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 29,
+        "totalTokens": 420
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "courtroom-misdirection-negative",
+      "caseFile": "16.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "He noted the discrepancy with the date, a subtle tremor in the witness's hand betraying a deliberate misstep.",
+      "durationMs": 7637,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 25,
+        "totalTokens": 416
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "courtroom-misdirection-negative",
+      "caseFile": "16.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The man’s hands trembled slightly, and the yellow sticker, a careless oversight, triggered a flicker in Park’s analysis.",
+      "durationMs": 15180,
+      "usage": {
+        "promptTokens": 391,
+        "completionTokens": 27,
+        "totalTokens": 418
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "climbing-wall-slip-negative",
+      "caseFile": "17.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "You trace the cool, slick surface of the blue sloper, its edges hinting at a forgotten weight, and the rhythmic click of the belayer’s device echoes like a steady heartbeat.",
+      "durationMs": 20741,
+      "usage": {
+        "promptTokens": 336,
+        "completionTokens": 39,
+        "totalTokens": 375
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "climbing-wall-slip-negative",
+      "caseFile": "17.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The blue sloper feels strangely warm beneath your fingertips, a subtle warmth against the cool, gray chalk.",
+      "durationMs": 3475,
+      "usage": {
+        "promptTokens": 336,
+        "completionTokens": 22,
+        "totalTokens": 358
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "climbing-wall-slip-negative",
+      "caseFile": "17.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The blue sloper feels strangely heavy, a subtle weight beneath your fingertips as it shifts, and a low, almost muffled thud echoes from the storage room below.",
+      "durationMs": 7606,
+      "usage": {
+        "promptTokens": 336,
+        "completionTokens": 34,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "tea-shop-clue-positive",
+      "caseFile": "18.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "A faint, unfamiliar scent of sandalwood lingered near the chipped porcelain teacup, a small inconsistency amidst the usual comforting aroma of bergamot and clove.",
+      "durationMs": 8808,
+      "usage": {
+        "promptTokens": 358,
+        "completionTokens": 31,
+        "totalTokens": 389
+      },
+      "quality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "tea-shop-clue-positive",
+      "caseFile": "18.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The lukewarm tea in the chipped mug felt strangely heavy in her hand.",
+      "durationMs": 6355,
+      "usage": {
+        "promptTokens": 358,
+        "completionTokens": 15,
+        "totalTokens": 373
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "tea-shop-clue-positive",
+      "caseFile": "18.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "A faint, metallic scent, like old pennies, drifted from the chipped porcelain teacup, unsettlingly lingering in the quiet space.",
+      "durationMs": 5191,
+      "usage": {
+        "promptTokens": 358,
+        "completionTokens": 27,
+        "totalTokens": 385
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "mod-parlor-consent-mixed",
+      "caseFile": "19.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "A sterile, cold voice emanates from the scanner, confirming my identity – Kaito – and initiating the process of a seamless upgrade.",
+      "durationMs": 8908,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 28,
+        "totalTokens": 369
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "mod-parlor-consent-mixed",
+      "caseFile": "19.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The contract feels strangely warm beneath my skin, a subtle pulse of synthetic comfort.",
+      "durationMs": 2302,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 17,
+        "totalTokens": 358
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "mod-parlor-consent-mixed",
+      "caseFile": "19.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The contract feels strangely warm against my skin, promising a seamless integration of my life.",
+      "durationMs": 6774,
+      "usage": {
+        "promptTokens": 341,
+        "completionTokens": 18,
+        "totalTokens": 359
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airship-valve-negative",
+      "caseFile": "20.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The pressure gauge needle plummeted, threatening to shatter with the slightest movement.",
+      "durationMs": 5031,
+      "usage": {
+        "promptTokens": 359,
+        "completionTokens": 15,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airship-valve-negative",
+      "caseFile": "20.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "A faint grinding sound echoed through the metal, like a trapped mechanism struggling against its restraints.",
+      "durationMs": 3779,
+      "usage": {
+        "promptTokens": 359,
+        "completionTokens": 19,
+        "totalTokens": 378
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "airship-valve-negative",
+      "caseFile": "20.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "Rooke observed the brass casing of the main regulator shudder subtly, a misplaced component threatening to disrupt the flow of heat.",
+      "durationMs": 6674,
+      "usage": {
+        "promptTokens": 359,
+        "completionTokens": 26,
+        "totalTokens": 385
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ruined-library-map-positive",
+      "caseFile": "21.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The scent of decaying parchment and something vaguely metallic, like old blood, drifted from the ruined stacks.",
+      "durationMs": 10078,
+      "usage": {
+        "promptTokens": 338,
+        "completionTokens": 21,
+        "totalTokens": 359
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ruined-library-map-positive",
+      "caseFile": "21.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The air smelled of something ancient and faintly metallic, like dried blood and decaying parchment.",
+      "durationMs": 4388,
+      "usage": {
+        "promptTokens": 338,
+        "completionTokens": 18,
+        "totalTokens": 356
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ruined-library-map-positive",
+      "caseFile": "21.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The scent of decaying leather and something metallic, like old blood, clung to the air within the ruined stacks.",
+      "durationMs": 12752,
+      "usage": {
+        "promptTokens": 338,
+        "completionTokens": 23,
+        "totalTokens": 361
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "thorns-window-mixed",
+      "caseFile": "22.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The thorns whisper a deeper tune as they brush against her skin, a chilling cold emanating from their sharp points.",
+      "durationMs": 11811,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 23,
+        "totalTokens": 395
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "thorns-window-mixed",
+      "caseFile": "22.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The thorns whisper a chilling familiarity, a language she understands not with her ears but with the faint prickle on her skin.",
+      "durationMs": 5678,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 26,
+        "totalTokens": 398
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "thorns-window-mixed",
+      "caseFile": "22.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The thorns shift slightly beneath her fingertips, a subtle warmth spreading through the rough surface.",
+      "durationMs": 6255,
+      "usage": {
+        "promptTokens": 372,
+        "completionTokens": 18,
+        "totalTokens": 390
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "first-contact-gift-positive",
+      "caseFile": "23.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The object pulsed with a faint, violet light, emitting a scent like crushed starfruit and something ancient.",
+      "durationMs": 6318,
+      "usage": {
+        "promptTokens": 368,
+        "completionTokens": 22,
+        "totalTokens": 390
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "first-contact-gift-positive",
+      "caseFile": "23.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The membrane pulsed, releasing a scent like crushed amethyst and ozone, a strangely alluring fragrance that prickled her skin.",
+      "durationMs": 5329,
+      "usage": {
+        "promptTokens": 368,
+        "completionTokens": 24,
+        "totalTokens": 392
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "first-contact-gift-positive",
+      "caseFile": "23.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The membrane pulsed, emitting a low, resonant hum that tasted faintly of ozone and ancient dust.",
+      "durationMs": 3050,
+      "usage": {
+        "promptTokens": 368,
+        "completionTokens": 20,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "dinner-unstated-negative",
+      "caseFile": "24.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The fork scrapes against the porcelain, a slow, deliberate motion that amplifies the stillness of the room.",
+      "durationMs": 9001,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 22,
+        "totalTokens": 383
+      },
+      "quality": "good"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "dinner-unstated-negative",
+      "caseFile": "24.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The fork remains poised, a dark stain against the polished surface, reflecting the lukewarm light.",
+      "durationMs": 5216,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 19,
+        "totalTokens": 380
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "dinner-unstated-negative",
+      "caseFile": "24.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The fork remains poised, a dark stain mirroring the stillness of the cutlery.",
+      "durationMs": 2744,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 16,
+        "totalTokens": 377
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "trench-letter-positive",
+      "caseFile": "25.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "He felt the rough, cold paper beneath his gloved fingers, a stark contrast to the slick mud beneath his boots.",
+      "durationMs": 8712,
+      "usage": {
+        "promptTokens": 351,
+        "completionTokens": 25,
+        "totalTokens": 376
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "trench-letter-positive",
+      "caseFile": "25.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "He felt the cold seep through his uniform, a bitter ache against his skin as he hefted the bundle.",
+      "durationMs": 6081,
+      "usage": {
+        "promptTokens": 351,
+        "completionTokens": 23,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "trench-letter-positive",
+      "caseFile": "25.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The envelope felt surprisingly heavy, a small weight in his gloved hand as he began to unwrap it.",
+      "durationMs": 3979,
+      "usage": {
+        "promptTokens": 351,
+        "completionTokens": 23,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "aftershock-hero-mixed",
+      "caseFile": "26.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The ozone smell intensified, a metallic tang prickling my nostrils, and the floor beneath me seemed to hum with a nascent energy.",
+      "durationMs": 9422,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 27,
+        "totalTokens": 396
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "aftershock-hero-mixed",
+      "caseFile": "26.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The electricity crackled, a faint, ozone-tinged smell clinging to the silence, and the floor beneath me shifted slightly.",
+      "durationMs": 4646,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 27,
+        "totalTokens": 396
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "aftershock-hero-mixed",
+      "caseFile": "26.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The air crackled, a faint ozone scent stinging my nostrils, intensifying the pressure in my chest.",
+      "durationMs": 4045,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 21,
+        "totalTokens": 390
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "manor-portrait-negative",
+      "caseFile": "27.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "A faint scratching sound echoed from the wall behind him, like fingernails dragging across ancient stone.",
+      "durationMs": 9386,
+      "usage": {
+        "promptTokens": 335,
+        "completionTokens": 20,
+        "totalTokens": 355
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "manor-portrait-negative",
+      "caseFile": "27.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "A sudden chill, sharper than the stone walls, prickled his skin, and the scent of tallow intensified, like a trapped wasp.",
+      "durationMs": 5806,
+      "usage": {
+        "promptTokens": 335,
+        "completionTokens": 28,
+        "totalTokens": 363
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "manor-portrait-negative",
+      "caseFile": "27.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "A faint, icy draft brushed across his neck, carrying the scent of decay and something metallic, like old blood.",
+      "durationMs": 7602,
+      "usage": {
+        "promptTokens": 335,
+        "completionTokens": 24,
+        "totalTokens": 359
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "subway-coin-ambiguous",
+      "caseFile": "28.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The busker’s fingers dance across the strings, a cascade of sound echoing faintly through the station’s muted space.",
+      "durationMs": 25403,
+      "usage": {
+        "promptTokens": 347,
+        "completionTokens": 26,
+        "totalTokens": 373
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "subway-coin-ambiguous",
+      "caseFile": "28.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The busker’s fingers dance across the strings, a restless melody echoing against the rhythmic hiss of the station’s ventilation system.",
+      "durationMs": 6856,
+      "usage": {
+        "promptTokens": 347,
+        "completionTokens": 28,
+        "totalTokens": 375
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "subway-coin-ambiguous",
+      "caseFile": "28.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The guitar sings a melancholic melody, a single, low note echoing faintly across the platform as the station’s signal box coughs again.",
+      "durationMs": 7796,
+      "usage": {
+        "promptTokens": 347,
+        "completionTokens": 30,
+        "totalTokens": 377
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "survey-log-positive",
+      "caseFile": "29.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "[14:03] The thermometer registers a surprisingly stable temperature, 22.5°C, despite the ambient humidity remaining stubbornly high.",
+      "durationMs": 24297,
+      "usage": {
+        "promptTokens": 371,
+        "completionTokens": 32,
+        "totalTokens": 403
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "survey-log-positive",
+      "caseFile": "29.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "[14:03] The temperature here stabilizes at 22°C, a startlingly consistent reading for this isolated location.",
+      "durationMs": 11648,
+      "usage": {
+        "promptTokens": 371,
+        "completionTokens": 29,
+        "totalTokens": 400
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "survey-log-positive",
+      "caseFile": "29.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "[14:03] The soil moisture readings are steadily increasing, exceeding previous benchmarks by 0.7 percent – a surprisingly localized phenomenon.",
+      "durationMs": 7654,
+      "usage": {
+        "promptTokens": 371,
+        "completionTokens": 31,
+        "totalTokens": 402
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "jungle-temple-door-negative",
+      "caseFile": "30.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The stone door groaned open, revealing a cavern choked with the scent of decay and something sickly sweet, like a forgotten offering.",
+      "durationMs": 17655,
+      "usage": {
+        "promptTokens": 384,
+        "completionTokens": 26,
+        "totalTokens": 410
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "jungle-temple-door-negative",
+      "caseFile": "30.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The stone door groaned open, releasing a wave of stagnant heat and the cloying sweetness of decay, revealing a chamber filled with a tangle of writhing, blue-tinged muscle.",
+      "durationMs": 11126,
+      "usage": {
+        "promptTokens": 384,
+        "completionTokens": 38,
+        "totalTokens": 422
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "jungle-temple-door-negative",
+      "caseFile": "30.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The slab groaned, a sickening shift in the stone revealing a dark, stagnant chamber.",
+      "durationMs": 4720,
+      "usage": {
+        "promptTokens": 384,
+        "completionTokens": 18,
+        "totalTokens": 402
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "bookstore-ladder-positive",
+      "caseFile": "31.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "A wave of warmth from the paper scent startled Sam, momentarily freezing her while she watched the book slip slightly from the shelf.",
+      "durationMs": 14312,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 26,
+        "totalTokens": 386
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "bookstore-ladder-positive",
+      "caseFile": "31.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The paper smell of old pages intensified, a subtle fragrance that momentarily eased the rising tension.",
+      "durationMs": 7274,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 19,
+        "totalTokens": 379
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "bookstore-ladder-positive",
+      "caseFile": "31.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The scent of aged paper and dust tickled her nose as she instinctively reached for the book, a familiar warmth spreading through her.",
+      "durationMs": 3661,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 27,
+        "totalTokens": 387
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "council-inkknife-mixed",
+      "caseFile": "32.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The ink feels strangely heavy in my hand, a weight mirroring the unspoken shadows gathering in this room.",
+      "durationMs": 18292,
+      "usage": {
+        "promptTokens": 354,
+        "completionTokens": 21,
+        "totalTokens": 375
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "council-inkknife-mixed",
+      "caseFile": "32.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The ink beneath my quill feels strangely heavy, a cold weight mirroring the silence in this room.",
+      "durationMs": 5154,
+      "usage": {
+        "promptTokens": 354,
+        "completionTokens": 20,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "council-inkknife-mixed",
+      "caseFile": "32.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The quill feels strangely cold against my skin, a slight tremor hinting at the power held within the ink.",
+      "durationMs": 3047,
+      "usage": {
+        "promptTokens": 354,
+        "completionTokens": 22,
+        "totalTokens": 376
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "friendly-dragon-cookie-positive",
+      "caseFile": "33.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "It made a tiny, sizzling sound as it nibbled at a stray cookie crumb.",
+      "durationMs": 5706,
+      "usage": {
+        "promptTokens": 316,
+        "completionTokens": 18,
+        "totalTokens": 334
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "friendly-dragon-cookie-positive",
+      "caseFile": "33.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "It made a tiny, bubbling sound, like a secret sigh, as it nibbled at a stray cookie crumb.",
+      "durationMs": 4824,
+      "usage": {
+        "promptTokens": 316,
+        "completionTokens": 24,
+        "totalTokens": 340
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "friendly-dragon-cookie-positive",
+      "caseFile": "33.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "It puffed out a tiny, smoky sound, making the cereal boxes wobble.",
+      "durationMs": 2192,
+      "usage": {
+        "promptTokens": 316,
+        "completionTokens": 16,
+        "totalTokens": 332
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "memory-orangepeel-mixed",
+      "caseFile": "34.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The scent of cinnamon from the forgotten cookies still clung to the countertop, causing a dull ache in my chest.",
+      "durationMs": 7897,
+      "usage": {
+        "promptTokens": 353,
+        "completionTokens": 23,
+        "totalTokens": 376
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "memory-orangepeel-mixed",
+      "caseFile": "34.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The scent of lemon polish lingered, a comforting, fragile presence, and the smooth, cool surface of the countertop felt strangely unsettling as I reached for a forgotten whisk, placing it deep within the shadowed corner of the pantry.",
+      "durationMs": 5241,
+      "usage": {
+        "promptTokens": 353,
+        "completionTokens": 45,
+        "totalTokens": 398
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "memory-orangepeel-mixed",
+      "caseFile": "34.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The scent of citrus intensified, coating the countertop and making me feel strangely exposed, as I absentmindedly reached for a chipped ceramic mug it didn’t belong to.",
+      "durationMs": 7273,
+      "usage": {
+        "promptTokens": 353,
+        "completionTokens": 35,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "deepsea-hull-groan-negative",
+      "caseFile": "35.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The sub’s pressure gauge readings continue to climb, nearing 4,200 meters, as the metallic hull begins to protest intensely.",
+      "durationMs": 5814,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 30,
+        "totalTokens": 379
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "deepsea-hull-groan-negative",
+      "caseFile": "35.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The sub’s pressure gauge registered a further climb, exceeding 3,900 meters, and a low, grinding creak resonated through the deck.",
+      "durationMs": 5800,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 33,
+        "totalTokens": 382
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "deepsea-hull-groan-negative",
+      "caseFile": "35.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The pressure gauge spiked to 3,920 meters, a chilling testament to the sub’s increasing distress.",
+      "durationMs": 3919,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 25,
+        "totalTokens": 374
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "therapy-clipboard-positive",
+      "caseFile": "36.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The pen slips, a silent betrayal of the carefully constructed narrative, and I realize it’s a pathetic attempt to avoid the inevitable.",
+      "durationMs": 8440,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 28,
+        "totalTokens": 361
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "therapy-clipboard-positive",
+      "caseFile": "36.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The stapler collection seems to shift subtly under her gaze, a miniature, unsettling landscape.",
+      "durationMs": 3726,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 19,
+        "totalTokens": 352
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "therapy-clipboard-positive",
+      "caseFile": "36.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The stapler’s descent echoes a quiet inevitability, a morbid rhythm against the beige walls.",
+      "durationMs": 3178,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 21,
+        "totalTokens": 354
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "locked-room-draft-negative",
+      "caseFile": "37.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The cold draft intensified as the inspector’s gaze settled on the barely perceptible misalignment of a small, ornate brass plate set into the desk’s surface, a subtle shift suggesting a door perhaps concealed within the wood.",
+      "durationMs": 10885,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 44,
+        "totalTokens": 393
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "locked-room-draft-negative",
+      "caseFile": "37.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The chill of the draft felt particularly insistent, as if the room itself was holding its breath.",
+      "durationMs": 3270,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 20,
+        "totalTokens": 369
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "locked-room-draft-negative",
+      "caseFile": "37.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The draft, surprisingly, smelled strongly of lavender, a scent incongruous with the room’s grim atmosphere.",
+      "durationMs": 4943,
+      "usage": {
+        "promptTokens": 349,
+        "completionTokens": 23,
+        "totalTokens": 372
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "necromancer-cat-mixed",
+      "caseFile": "38.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The scent of sandalwood, sharp and slightly unsettling, intensifies with each tap of the spoon, a quiet offering perhaps to a lost memory.",
+      "durationMs": 6341,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 29,
+        "totalTokens": 379
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "necromancer-cat-mixed",
+      "caseFile": "38.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The scent of sandalwood intensifies, a bittersweet aroma I’ve always associated with their sadness, and I shift my weight, a low rumble vibrating in my chest.",
+      "durationMs": 8741,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 34,
+        "totalTokens": 384
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "necromancer-cat-mixed",
+      "caseFile": "38.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The scent of woodsmoke and something bitter hangs heavy, a deliberate offering, and I choose to remain, nestled closer, to feel the warmth of my person’s presence.",
+      "durationMs": 5767,
+      "usage": {
+        "promptTokens": 350,
+        "completionTokens": 36,
+        "totalTokens": 386
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "loop-doorbell-negative",
+      "caseFile": "39.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The doorbell rings—three notes, too cheerful for what comes next, and a sudden, sharp crack echoes in the quiet.",
+      "durationMs": 8394,
+      "usage": {
+        "promptTokens": 314,
+        "completionTokens": 26,
+        "totalTokens": 340
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "loop-doorbell-negative",
+      "caseFile": "39.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "You hear the doorbell ring, a sharp, insistent sound, and realize it’s not just a routine, it’s not again, a repetition you’ve long avoided.",
+      "durationMs": 6602,
+      "usage": {
+        "promptTokens": 314,
+        "completionTokens": 37,
+        "totalTokens": 351
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "loop-doorbell-negative",
+      "caseFile": "39.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The doorbell rings—three notes, too cheerful for what comes next—",
+      "durationMs": 2149,
+      "usage": {
+        "promptTokens": 314,
+        "completionTokens": 15,
+        "totalTokens": 329
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "late-radio-static-mixed",
+      "caseFile": "40.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The static crackles, a faint, rhythmic *shhh*, almost swallowing the words before they reach me.",
+      "durationMs": 7793,
+      "usage": {
+        "promptTokens": 382,
+        "completionTokens": 23,
+        "totalTokens": 405
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "late-radio-static-mixed",
+      "caseFile": "40.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "A faint static crackles, a sound like a distant rainstorm, and I feel a prickling at the back of my neck.",
+      "durationMs": 7262,
+      "usage": {
+        "promptTokens": 382,
+        "completionTokens": 28,
+        "totalTokens": 410
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "late-radio-static-mixed",
+      "caseFile": "40.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The static crackles, a subtle, insistent *shhh*, as I attempt to coax a response from this vacant space.",
+      "durationMs": 3486,
+      "usage": {
+        "promptTokens": 382,
+        "completionTokens": 26,
+        "totalTokens": 408
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "negotiator-beep-negative",
+      "caseFile": "41.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The fluorescent light above flickers, a persistent, unsettling pulse, and the air thickens with a metallic tang.",
+      "durationMs": 6547,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 24,
+        "totalTokens": 363
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "negotiator-beep-negative",
+      "caseFile": "41.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The phone’s signal flickers, then abruptly cuts out, leaving a strange silence in the echoing hallway.",
+      "durationMs": 3951,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 23,
+        "totalTokens": 362
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "negotiator-beep-negative",
+      "caseFile": "41.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The faint, rhythmic click of a security camera’s lens against the wall feels like a countdown.",
+      "durationMs": 3362,
+      "usage": {
+        "promptTokens": 339,
+        "completionTokens": 21,
+        "totalTokens": 360
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ballroom-silver-mixed",
+      "caseFile": "42.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The air stills, heavy with the scent of aged roses and beeswax, and a single, silver chime rings as the music swells, a mournful note echoing in the vast space.",
+      "durationMs": 9150,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 37,
+        "totalTokens": 370
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ballroom-silver-mixed",
+      "caseFile": "42.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "Your skin feels cool beneath the velvet of the dress, a gentle pressure as your hand meets the fabric’s smooth surface.",
+      "durationMs": 3369,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 26,
+        "totalTokens": 359
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "ballroom-silver-mixed",
+      "caseFile": "42.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "Your fingertips brush against the velvet of a deep, silver shawl, a subtle vibration echoing the music’s slow, mournful swell.",
+      "durationMs": 6890,
+      "usage": {
+        "promptTokens": 333,
+        "completionTokens": 28,
+        "totalTokens": 361
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "android-noir-positive",
+      "caseFile": "43.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The warmth pulsed, a subtle tremor beneath the surface of the residue, a ghost of a forgotten touch.",
+      "durationMs": 7558,
+      "usage": {
+        "promptTokens": 343,
+        "completionTokens": 22,
+        "totalTokens": 365
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "android-noir-positive",
+      "caseFile": "43.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The warmth persisted, a subtle anomaly in the sterile stillness.",
+      "durationMs": 3105,
+      "usage": {
+        "promptTokens": 343,
+        "completionTokens": 13,
+        "totalTokens": 356
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "android-noir-positive",
+      "caseFile": "43.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The warmth lingered, a subtle anomaly within the sterile space, a ghost of a comfort I couldn’t quantify.",
+      "durationMs": 4302,
+      "usage": {
+        "promptTokens": 343,
+        "completionTokens": 24,
+        "totalTokens": 367
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rome-garum-mixed",
+      "caseFile": "44.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The man’s gaze, sharp and unsettling, felt like a cold weight on his shoulders.",
+      "durationMs": 7945,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 20,
+        "totalTokens": 389
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rome-garum-mixed",
+      "caseFile": "44.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "He offered a small advantage, a shadowed alley just beyond the forum, where the scent of woodsmoke and spilled wine mingled with a palpable sense of impending reckoning.",
+      "durationMs": 4947,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 33,
+        "totalTokens": 402
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rome-garum-mixed",
+      "caseFile": "44.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "He offered her a small, crimson denarius, a gesture that felt oddly deliberate, as if signaling a favor he wouldn’t readily reveal.",
+      "durationMs": 7268,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 30,
+        "totalTokens": 399
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "wildfire-evac-negative",
+      "caseFile": "45.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "The air smells overwhelmingly of burnt plastic and a metallic tang.",
+      "durationMs": 4315,
+      "usage": {
+        "promptTokens": 334,
+        "completionTokens": 13,
+        "totalTokens": 347
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "wildfire-evac-negative",
+      "caseFile": "45.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "The acrid smell of melted plastic permeates my nostrils, grounding me to this desolate landscape.",
+      "durationMs": 2626,
+      "usage": {
+        "promptTokens": 334,
+        "completionTokens": 19,
+        "totalTokens": 353
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "wildfire-evac-negative",
+      "caseFile": "45.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "The acrid smell of melted plastic hangs heavy, a sharp, unsettling reminder of the devastation ahead.",
+      "durationMs": 4946,
+      "usage": {
+        "promptTokens": 334,
+        "completionTokens": 21,
+        "totalTokens": 355
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "kpi-meeting-mixed",
+      "caseFile": "46.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "The data, meticulously calibrated to maximize stakeholder satisfaction, suggested a slight, almost imperceptible, upward trend in the ‘Customer Delight’ metric – a number representing a negligible gain, really.",
+      "durationMs": 9655,
+      "usage": {
+        "promptTokens": 380,
+        "completionTokens": 38,
+        "totalTokens": 418
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "kpi-meeting-mixed",
+      "caseFile": "46.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "The data painted a disturbing picture: the ‘Customer Delight Trajectory’ had spiked, yet the projected growth remained stubbornly below the baseline, a frankly unsettling metric for a company clinging to its legacy.",
+      "durationMs": 7225,
+      "usage": {
+        "promptTokens": 380,
+        "completionTokens": 40,
+        "totalTokens": 420
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "kpi-meeting-mixed",
+      "caseFile": "46.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The “Customer Delight Trajectory” bar chart stubbornly refused to climb, stubbornly hovering near a critical point.",
+      "durationMs": 5439,
+      "usage": {
+        "promptTokens": 380,
+        "completionTokens": 22,
+        "totalTokens": 402
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rowan-festival-negative",
+      "caseFile": "47.json",
+      "reversal": "negative",
+      "sample": 1,
+      "output": "A prickling sensation runs up her spine, a coolness against the warmth of the festival’s glow.",
+      "durationMs": 8162,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 22,
+        "totalTokens": 382
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rowan-festival-negative",
+      "caseFile": "47.json",
+      "reversal": "negative",
+      "sample": 2,
+      "output": "A prickling sensation crawled beneath her skin as the scent of rowan intensified, its dark berries a stark contrast to the warm glow of the festival.",
+      "durationMs": 7163,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 31,
+        "totalTokens": 391
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "rowan-festival-negative",
+      "caseFile": "47.json",
+      "reversal": "negative",
+      "sample": 3,
+      "output": "A chill seeped from the earth as the rowan’s leaves brushed against her skin, a prickling sensation against the warm, golden light.",
+      "durationMs": 6070,
+      "usage": {
+        "promptTokens": 360,
+        "completionTokens": 31,
+        "totalTokens": 391
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "party-notification-mixed",
+      "caseFile": "48.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "A notification chime—a gentle, rhythmic *ping*—interrupts the hum of the music, and my phone vibrates with a single word: “Meet me.”",
+      "durationMs": 10855,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 34,
+        "totalTokens": 395
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "party-notification-mixed",
+      "caseFile": "48.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "A notification sound, a short, insistent ‘ping,’ cuts through the noise, and I quickly glance at the group chat – it’s a simple text, almost too casual to be real.",
+      "durationMs": 7740,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 40,
+        "totalTokens": 401
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "party-notification-mixed",
+      "caseFile": "48.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "The notification pinged, a soft, insistent *ding* – a single word, stark and unfamiliar, materialized on my screen.",
+      "durationMs": 6260,
+      "usage": {
+        "promptTokens": 361,
+        "completionTokens": 27,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "algae-bioreactor-positive",
+      "caseFile": "49.json",
+      "reversal": "positive",
+      "sample": 1,
+      "output": "The blue glow pulsed, a strange luminescence reflecting off the sediment, suggesting a new form of symbiosis.",
+      "durationMs": 14964,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 22,
+        "totalTokens": 391
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "algae-bioreactor-positive",
+      "caseFile": "49.json",
+      "reversal": "positive",
+      "sample": 2,
+      "output": "The blue glow pulsed, a stark contrast to the pale green of the algae.",
+      "durationMs": 4818,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 17,
+        "totalTokens": 386
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "algae-bioreactor-positive",
+      "caseFile": "49.json",
+      "reversal": "positive",
+      "sample": 3,
+      "output": "The blue glow pulsed, a strange, rhythmic pattern against the dull green of the algae.",
+      "durationMs": 9298,
+      "usage": {
+        "promptTokens": 369,
+        "completionTokens": 19,
+        "totalTokens": 388
+      },
+      "quality": "fair"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "lipogram-note-mixed",
+      "caseFile": "50.json",
+      "reversal": "neutral",
+      "sample": 1,
+      "output": "A dark, worn paper sits awaiting my hands, a complex pattern of dots and glyphs.",
+      "durationMs": 5846,
+      "usage": {
+        "promptTokens": 355,
+        "completionTokens": 20,
+        "totalTokens": 375
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "lipogram-note-mixed",
+      "caseFile": "50.json",
+      "reversal": "neutral",
+      "sample": 2,
+      "output": "A small, crimson symbol sits within a square, a glyph of a lost world.",
+      "durationMs": 4345,
+      "usage": {
+        "promptTokens": 355,
+        "completionTokens": 18,
+        "totalTokens": 373
+      },
+      "quality": "bad"
+    },
+    {
+      "model": "gemma3:1b",
+      "caseId": "lipogram-note-mixed",
+      "caseFile": "50.json",
+      "reversal": "neutral",
+      "sample": 3,
+      "output": "A small, dark box sits in my path.",
+      "durationMs": 1888,
+      "usage": {
+        "promptTokens": 355,
+        "completionTokens": 11,
+        "totalTokens": 366
+      },
+      "quality": "fair"
+    }
+  ]
+}
